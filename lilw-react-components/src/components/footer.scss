@@ -1,0 +1,102 @@
+$white: #fff;
+$white-hover: #b3b3b3;
+$navy: #242F60;
+$lime: #CAD401;
+
+footer {
+  background-color: $white !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+
+  .main {
+    margin: 40px 0 0;
+    padding: 60px 0;
+    height: auto;
+    background-color: $navy;
+    background-image: url('./images/waves-bg.svg');
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: 5% 15%;
+    color: $white;
+    text-align: left;
+    position: relative;
+
+    .inner {
+      margin: 0 auto;
+      position: relative;
+    }
+
+    ul {
+      margin: 0;
+      display: block;
+
+      li {
+        display: inline-block;
+        margin: 0 5px 0 0;
+        padding: 0;
+        background: none;
+
+        a {
+          color: $white;
+          transition: .2s;
+          position: relative;
+          top: 0;
+
+          &:hover {
+            text-decoration: none;
+            top: -2px;
+            color: $white-hover;
+          }
+
+          &:visited {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .footer-links-list, .footer-info-list {
+      margin-bottom: 20px;
+
+      li {
+        &::after {
+          content: "|";
+          margin-left: 5px;
+        }
+
+        &:last-child::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    display: block;
+  }
+
+  .logos {
+    padding: 20px 0;
+    background-color: $white;
+
+    .col {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+
+      img {
+        max-width: 160px;
+
+        &.erdf {
+          margin-left: 48px;
+        }
+      }
+    }
+  }
+}
