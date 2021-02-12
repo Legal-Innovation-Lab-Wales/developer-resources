@@ -1,9 +1,13 @@
 header .navbar {
-  .col {
-    padding: 0;
-  }
+  .container {
+    padding-left: 30px;
 
-  .university-logo img {
-    height: 100%;
+    .col {
+      padding: 0;
+
+      .university-logo img {
+        height: 100%;
+      }
+    }
   }
 }
