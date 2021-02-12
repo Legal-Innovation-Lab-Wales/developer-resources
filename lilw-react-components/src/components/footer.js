@@ -41,10 +41,14 @@ export default function Footer({ additional_logo }) {
       <Container className='logos'>
         <Row>
           <Col>
-            { additional_logo }
             <img alt='Swansea University' src={swansea_university_logo}/>
             <img alt='Legal Innovation Lab Wales' src={lilw_logo_blue}/>
             <img className='erdf' alt='European Regional Development Fund' src={erdf_logo}/>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            { additional_logo }
           </Col>
         </Row>
       </Container>
