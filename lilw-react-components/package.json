@@ -1,11 +1,10 @@
 {
   "name": "lilw-react-components",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "private": false,
   "files": [
-    "dist",
-    "assets/README.md"
+    "dist"
   ],
   "repository": {
     "type": "git",

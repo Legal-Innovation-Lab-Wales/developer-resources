@@ -1,7 +1,13 @@
-header {
-  .navbar {
-    .container, .container-fluid {
-      justify-content: flex-start;
+header .navbar {
+  .container {
+    padding-left: 30px;
+
+    .col {
+      padding: 0;
+
+      .university-logo img {
+        height: 100%;
+      }
     }
   }
 }
