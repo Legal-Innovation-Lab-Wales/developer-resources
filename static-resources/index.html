@@ -30,19 +30,19 @@
                 should make building things with the lab loads easier.
             </p>
             <div class="social d-flex justify-content-center">
-                <a href="https://legaltech.wales" class="mx-2">
+                <a class="mx-2" href="https://legaltech.wales">
                     <i class="fas fa-home"></i>
                 </a>
-                <a href="mailto:legalinnovation@swansea.ac.uk" class="mx-2">
+                <a class="mx-2" href="mailto:legalinnovation@swansea.ac.uk">
                     <i class="fas fa-envelope"></i>
                 </a>
-                <a href="https://twitter.com/LegalLabWales" class="mx-2">
+                <a class="mx-2" href="https://twitter.com/LegalLabWales">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a href="https://www.linkedin.com/company/legal-innovation-lab-wales/" class="mx-2">
+                <a class="mx-2" href="https://www.linkedin.com/company/legal-innovation-lab-wales/">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/Legal-Innovation-Lab-Wales" class="mx-2">
+                <a class="mx-2" href="https://github.com/Legal-Innovation-Lab-Wales">
                     <i class="fab fa-github"></i>
                 </a>
             </div>
@@ -58,7 +58,7 @@
                     master versions live on Lucidchart and they can be edited on there. They are hosted with consistent
                     file names and permalinked from media.legaltech.wales </p>
             </div>
-            <div class="row row-cols-1 row-cols-md-2 g-4 mx-auto card-row">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mx-auto card-row">
                 <div class="col">
                     <a href="https://media.legaltech.wales/info/project-lifecycle.pdf" target="_blank">
                         <div class="card h-100">
@@ -91,6 +91,14 @@
                         <div class="card h-100">
                             <h4 class="card-title">Software Development</h4>
                             <p class="small">An overview of the process which we follow when developing software.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://media.legaltech.wales/docs/LILW-Collaboration-Form.docx" target="_blank">
+                        <div class="card h-100">
+                            <h4 class="card-title">Collaboration Form</h4>
+                            <p class="small">Interested in Collaborating? Download & fill in this form, then get in touch.</p>
                         </div>
                     </a>
                 </div>
@@ -164,6 +172,8 @@
                             <p>Composed of a Java back-end and React front-end, the data-sources for this application
                                 come from a combination of an Ontology Model, and the aforementioned XML files. The
                                 project structure is as outlined below</p>
+                            <p><strong>Note:</strong> This app goes into hibernation when not in use, if it hasn't
+                                loaded in about 60s give the page a refresh</p>
                         </div>
                         <a class="btn status released mt-auto" href="https://akn-judiciary-demo.legaltech.wales/">Released</a>
                         <a class="btn repo" href="https://github.com/Legal-Innovation-Lab-Wales/judiciary-akn-tagger">Source
@@ -175,7 +185,8 @@
                         <h3 class="card-title">Include Journey</h3>
                         <div class="description">
                             <h5>Overview</h5>
-                            <p><em>By Gemma Morgan</em> At present criminal justice agencies both in the UK and internationally do not fully
+                            <p><em>By Gemma Morgan</em> At present criminal justice agencies both in the UK and
+                                internationally do not fully
                                 realise the opportunities that digital technologies offer to improve service delivery
                                 and the lives of service users. As a result, there has been little digital innovation
                                 within the realms of offender rehabilitation. The Ministry of Justice (2019) estimate
@@ -221,13 +232,64 @@
         <div class="col">
             <div class="title">
                 <h2>Our Approach</h2>
-                <p class="lead">This Section is a seciton</p>
+                <p class="lead">Coming Soon.</p>
+                <p>We'll soon be adding some articles here which discuss our approach to building software.</p>
             </div>
+        </div>
+    </section>
+
+    <section class="row py-5" id="other">
+        <div class="col-12 col-md-8 mx-auto">
+            <h2 class="text-center">Other Helpful Links</h2>
+            <h3> Javascript for Swapping Between Welsh and English</h3>
+            <p>Used to power the language switcher on the LegalTech.Wales Squarespace site</p>
+            <p><strong>Usage Note: </strong>add class="english-lang" to main body and class="english-lang" and
+                class="welsh-lang hidden" to the respective sections. Then create a button to call the JS. </p>
+            <pre><code>
+                /*
+                Welsh Mode Toggle
+                 */
+                function toggleLanguageMode () {
+                    // Toggle from English to Welsh
+                    var welshSections = document.getElementsByClassName("welsh-lang");
+                    var englishSections = document.getElementsByClassName( "english-lang");
+                    if ((document.getElementsByTagName("BODY")[0].className) === 'english-lang') {
+                        // Update Tag in Body declaration
+                        document.getElementsByTagName("BODY")[0].classList.add('welsh-lang');
+                        document.getElementsByTagName("BODY")[0].classList.remove('english-lang');
+                        // Hide English and un-hide Welsh
+                        [].forEach.call(englishSections, function(add_hidden){
+                            add_hidden.classList.add("hidden");
+                        });
+
+                        [].forEach.call(welshSections, function(rm_hidden){
+                            rm_hidden.classList.remove("hidden");
+                        });
+
+                    }
+                    // Toggle from Welsh To English
+                    else if ((document.getElementsByTagName("BODY")[0].className) === 'welsh-lang') {
+                        // Update Tag in Body declaration
+                        document.getElementsByTagName("BODY")[0].classList.add('english-lang');
+                        document.getElementsByTagName("BODY")[0].classList.remove('welsh-lang');
+                        // Hide Welsh and un-hide English
+                        [].forEach.call(welshSections, function(add_hidden){
+                            add_hidden.classList.add("hidden");
+                        });
+
+                        [].forEach.call(englishSections, function(rm_hidden){
+                            rm_hidden.classList.remove("hidden");
+                        });
+                    } else {
+                        alert("Somethings gone wrong with the Language, Sorry!")
+                    }
+                }
+            </code></pre>
         </div>
     </section>
 </main>
 <footer>
-    <div class="main">
+    <div class="links">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -273,7 +335,6 @@
                 <img alt="European Regional Development Fund" class="erdf" src="assets/images/erdf.png">
             </div>
         </div>
-
     </div>
 </footer>
 </body>

@@ -63,7 +63,7 @@ header .social a {
   height: 3rem;
   width: 3rem;
   background: #ffffffe6;
-  box-shadow: 6px 4px 8px 0px #0006;
+  box-shadow: 6px 4px 8px 0 #0006;
   border-radius: 100%;
   line-height: 3rem;
   color: #495087;
@@ -89,6 +89,11 @@ main .card {
 main #documents .card-row {
   max-width: 600px;
 }
+@media (min-width: 1200px) {
+  main #documents .card-row {
+    max-width: 900px;
+  }
+}
 main #documents .card-row .col {
   max-width: 300px;
 }
@@ -103,11 +108,11 @@ main #documents .card-row .col:nth-child(1) .card:hover {
   background: linear-gradient(35deg, #d6eaf8, #aed6f1);
 }
 main #documents .card-row .col:nth-child(2) .card {
-  background: #d0ece7;
-  color: #0b5345;
+  background: #fcf3cf;
+  color: #7d6608;
 }
 main #documents .card-row .col:nth-child(2) .card:hover {
-  background: linear-gradient(35deg, #d0ece7, #a2d9ce);
+  background: linear-gradient(35deg, #fcf3cf, #f9e79f);
 }
 main #documents .card-row .col:nth-child(3) .card {
   background: #f6ddcc;
@@ -122,6 +127,13 @@ main #documents .card-row .col:nth-child(4) .card {
 }
 main #documents .card-row .col:nth-child(4) .card:hover {
   background: linear-gradient(35deg, #ebdef0, #d7bde2);
+}
+main #documents .card-row .col:nth-child(5) .card {
+  background: #d5f5e3;
+  color: #186a3b;
+}
+main #documents .card-row .col:nth-child(5) .card:hover {
+  background: linear-gradient(35deg, #d5f5e3, #abebc6);
 }
 main #projects {
   color: #ffffff;
@@ -160,87 +172,74 @@ main #projects .card .btn.repo {
 main #projects .card .btn.repo:hover {
   background: linear-gradient(100deg, #495087, #242F60);
 }
+main #approach {
+  color: #ffffff;
+  background: linear-gradient(100deg, #0e182a, #210047);
+}
 
 .hidden {
   display: none;
 }
 
-/* *** QUICK LINK BOXES *** */
-/*.quick-links{
-    padding:30px 0;
-}
-.link-box{
-    min-width:290px;
-    max-width:400px;
-    min-height:190px;
-    padding:10px;
-    margin:10px;
-    position:relative;
-    display:inline-block;
-    border-radius:5px;
-    box-shadow:0 1px 2px rgba(0,0,0,0.15);
-    transition:all 0.3s ease-in-out;
-    background-color: var(--white);
-}
-.link-box h3{
-    color: var(--navy);
-    margin-top:20px;
-    margin-bottom:10px;
-    font-size:24px
-}
-.link-box i{
-    color:var(--navy);
-}
-.link-box p{
-    color: var(--ink);
-    line-height:1.5;
-    font-size:14px;
-    margin-bottom:0
-}
-.link-box:hover{
-    transform:scale(1.01, 1.01);
-    box-shadow:0 2px 5px rgba(0,0,0,0.3);
-    z-index:2
-}
-.link-box:hover h3,.link-box:hover i{
-    color:var(--navy);
-    transition:all 0.3s ease-in-out
-}
-.link-box:hover::after{
-    opacity:1
-}
-@media (min-width: 992px){
-    .link-box{
-        margin:10px
-    }
-}*/
 /* *** FOOTER *** */
 footer {
-  background-color: var(--white);
+  background-color: #ffffff;
   padding-bottom: 0;
+  /* Main Footer */
 }
-
-/* Main Footer */
-footer .main {
-  margin: 40px 0 0;
+footer .links {
+  margin: 0;
   padding: 60px 0;
   height: auto;
-  background-color: var(--navy);
+  background-color: #242F60;
   background-image: url("../images/waves-bg.svg");
   background-repeat: no-repeat;
   background-size: 150%;
   background-position: 5% 15%;
-  color: var(--white);
+  color: #ffffff;
   text-align: left;
   position: relative;
 }
-
-footer .main .inner {
+footer .links .inner {
   margin: 0 auto;
   position: relative;
 }
-
-footer::before {
+footer .links ul {
+  margin: 0;
+  display: block;
+}
+footer .links ul li {
+  display: inline-block;
+  margin: 0 5px 0 0;
+  padding: 0;
+  background: none;
+}
+footer .links ul li a {
+  color: #ffffff;
+  transition: 0.2s;
+  position: relative;
+  top: 0;
+}
+footer .links ul li a:hover {
+  text-decoration: none;
+  top: -2px;
+  /*color: #b3b3b3;*/
+  color: var(--white-hover);
+}
+footer .links ul li a:visited {
+  color: #ffffff;
+}
+footer .links .footer-links-list, footer .links .footer-info-list {
+  margin-bottom: 20px;
+}
+footer .links .footer-links-list li::after, footer .links .footer-info-list li::after {
+  content: "|";
+  margin-left: 5px;
+}
+footer .links .footer-links-list li:last-child::after, footer .links .footer-info-list li:last-child::after {
+  display: none;
+}
+footer .links::before {
   content: "";
   position: absolute;
   top: -15px;
@@ -249,107 +248,21 @@ footer::before {
   height: 1px;
   display: block;
 }
-
-footer .main ul {
-  margin: 0;
-  display: block;
-}
-
-footer .main ul li {
-  display: inline-block;
-  margin: 0 5px 0 0;
-  padding: 0;
-  background: none;
-}
-
-footer .main ul li a {
-  color: var(--white);
-  transition: 0.2s;
-  position: relative;
-  top: 0;
-}
-
-footer .main ul li a:hover {
-  text-decoration: none;
-  top: -2px;
-  /*color: #b3b3b3;*/
-  color: var(--white-hover);
-}
-
-footer .main ul li a:visited {
-  color: var(--white);
-}
-
-footer .main .footer-links-list, footer .footer-info-list {
-  margin-bottom: 20px;
-}
-
-footer .main .footer-links-list li::after, footer .footer-info-list li::after {
-  content: "|";
-  margin-left: 5px;
-}
-
-footer .main .footer-links-list li:last-child::after, footer .footer-info-list li:last-child::after {
-  display: none;
-}
-
-/* Logos section */
 footer .logos {
   padding: 20px 0;
-  background-color: var(--white);
+  background-color: #ffffff;
 }
-
 footer .logos .col {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
-
 footer .logos .col img {
   /*float: right;*/
   max-width: 160px;
 }
-
 footer .logos .col img.erdf {
   margin-left: 48px;
-}
-
-/* Scroll to top button*/
-.scroll-top-btn {
-  position: fixed;
-  bottom: 5px;
-  right: 15px;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--lime);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  transition: background 0.3s, opacity 0.6s;
-  cursor: pointer;
-  opacity: 0;
-  z-index: 100;
-}
-
-.scroll-top-btn.visible {
-  opacity: 1;
-}
-
-.scroll-top-btn svg path {
-  stroke: var(--primary);
-  fill: var(--primary);
-  transition: stroke 0.3s, fill 0.3s;
-}
-
-.scroll-top-btn:hover {
-  background: var(--primary);
-}
-
-.scroll-top-btn:hover svg path {
-  stroke: var(--white);
-  fill: var(--white);
 }
 
 /*# sourceMappingURL=lilw-custom.css.map */
