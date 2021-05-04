@@ -1,3 +1,5 @@
+/* *** Variables *** */
+/* University Colors */
 :root {
   /*colors*/
   --navy: #242F60;
@@ -35,11 +37,7 @@
   justify-content: flex-start;
 }
 
-/*
-***
-* General CSS
-***
- */
+/* *** General CSS *** */
 header {
   position: relative;
 }
@@ -57,9 +55,36 @@ header::before {
 header .header-content {
   position: relative;
 }
+header .social {
+  margin-top: 1rem;
+}
+header .social a {
+  text-align: center;
+  height: 3rem;
+  width: 3rem;
+  background: #ffffffe6;
+  box-shadow: 6px 4px 8px 0px #0006;
+  border-radius: 100%;
+  line-height: 3rem;
+  color: #495087;
+}
+header .social a:hover {
+  color: #212529;
+  background: white;
+  box-shadow: none;
+  transition: all 0.3s;
+}
 
 main .title {
   text-align: center;
+}
+main h2, main h3 {
+  font-weight: 700;
+}
+main .card {
+  padding: 1rem;
+  text-align: center;
+  border: none;
 }
 main #documents .card-row {
   max-width: 600px;
@@ -69,21 +94,78 @@ main #documents .card-row .col {
 }
 main #documents .card-row .col a {
   text-decoration: none;
+}
+main #documents .card-row .col:nth-child(1) .card {
+  background: #d6eaf8;
+  color: #1b4f72;
+}
+main #documents .card-row .col:nth-child(1) .card:hover {
+  background: linear-gradient(35deg, #d6eaf8, #aed6f1);
+}
+main #documents .card-row .col:nth-child(2) .card {
+  background: #d0ece7;
+  color: #0b5345;
+}
+main #documents .card-row .col:nth-child(2) .card:hover {
+  background: linear-gradient(35deg, #d0ece7, #a2d9ce);
+}
+main #documents .card-row .col:nth-child(3) .card {
+  background: #f6ddcc;
+  color: #6e2c00;
+}
+main #documents .card-row .col:nth-child(3) .card:hover {
+  background: linear-gradient(35deg, #f6ddcc, #edbb99);
+}
+main #documents .card-row .col:nth-child(4) .card {
+  background: #ebdef0;
+  color: #512e5f;
+}
+main #documents .card-row .col:nth-child(4) .card:hover {
+  background: linear-gradient(35deg, #ebdef0, #d7bde2);
+}
+main #projects {
+  color: #ffffff;
+  background: linear-gradient(100deg, #210047, #242F60, #020758);
+}
+main #projects .card {
   color: #212529;
 }
-main #documents .card-row .col a .card {
-  padding: 1rem;
-  text-align: center;
+main #projects .card .btn {
+  width: 160px;
+  margin: 0.2rem auto;
+  font-weight: 700;
 }
+main #projects .card .btn.status {
+  color: #ffffff;
+}
+main #projects .card .btn.status.released {
+  background: #378137;
+}
+main #projects .card .btn.status.released:hover {
+  background: linear-gradient(100deg, #439D43, #70C270);
+}
+main #projects .card .btn.status.demo {
+  background: #242F60;
+}
+main #projects .card .btn.status.demo:hover {
+  background: linear-gradient(100deg, #3E50A3, #4E62BC);
+}
+main #projects .card .btn.status.development {
+  background: #F2A53F;
+}
+main #projects .card .btn.repo {
+  background: #24292e;
+  color: #ffffff;
+}
+main #projects .card .btn.repo:hover {
+  background: linear-gradient(100deg, #495087, #242F60);
+}
+
 .hidden {
   display: none;
 }
 
-/*
-***
-* QUICK LINK BOXES
-***
-*/
+/* *** QUICK LINK BOXES *** */
 /*.quick-links{
     padding:30px 0;
 }
@@ -132,11 +214,7 @@ main #documents .card-row .col a .card {
         margin:10px
     }
 }*/
-/*
-***
-* FOOTER
-***
-*/
+/* *** FOOTER *** */
 footer {
   background-color: var(--white);
   padding-bottom: 0;

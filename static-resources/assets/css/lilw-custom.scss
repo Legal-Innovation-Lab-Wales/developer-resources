@@ -1,3 +1,20 @@
+/* *** Variables *** */
+
+/* University Colors */
+
+$ink: #212529;
+$navy: #242F60;
+$sky-blue: #93c9de;
+$lime: #CAD401;
+$gray: #DDDDDD;
+$green: #378137;
+$orange: #F2A53F;
+$red: #E00000;
+$white: #ffffff;
+$light-gray: #fcfcfc;
+$dark-gray: #495087;
+
+
 :root {
   /*colors*/
   --navy: #242F60;
@@ -32,17 +49,45 @@
   --white-hover: #b3b3b3;
 }
 
-$ink: #212529;
+// Colours from https://htmlcolorcodes.com/color-chart/flat-design-color-chart/
+
+// Peter river
+$blue-card-light-1: #d6eaf8;
+$blue-card-light-2: #aed6f1;
+$blue-card-light-3: #85c1e9;
+$blue-card-background: $blue-card-light-1;
+$blue-card-background-2: linear-gradient(35deg, $blue-card-light-1, $blue-card-light-2);
+$blue-card-text: #1b4f72;
+
+// Green sea
+$green-card-light-1: #d0ece7;
+$green-card-light-2: #a2d9ce;
+$green-card-light-3: #73c6b6;
+$green-card-background: $green-card-light-1;
+$green-card-background-2: linear-gradient(35deg, $green-card-light-1, $green-card-light-2);
+$green-card-text: #0b5345;
+
+// Amethyst
+$purple-card-light-1: #ebdef0;
+$purple-card-light-2: #d7bde2;
+$purple-card-light-3: #c39bd3;
+$purple-card-background: $purple-card-light-1;
+$purple-card-background-2: linear-gradient(35deg, $purple-card-light-1, $purple-card-light-2);
+$purple-card-text: #512e5f;
+
+// Pumpkin
+$orange-card-light-1: #f6ddcc;
+$orange-card-light-2: #edbb99;
+$orange-card-light-3: #e59866;
+$orange-card-background: $orange-card-light-1;
+$orange-card-background-2: linear-gradient(35deg, $orange-card-light-1, $orange-card-light-2);
+$orange-card-text: #6e2c00;
 
 .navbar > .container, .navbar > .container-fluid {
   justify-content: flex-start;
 }
 
-/*
-***
-* General CSS
-***
- */
+/* *** General CSS *** */
 
 header {
   position: relative;
@@ -62,6 +107,28 @@ header {
   .header-content {
     position: relative;
   }
+
+  .social {
+    margin-top: 1rem;
+
+    a {
+      text-align: center;
+      height: 3rem;
+      width: 3rem;
+      background: #ffffffe6;
+      box-shadow: 6px 4px 8px 0px #0006;
+      border-radius: 100%;
+      line-height: 3rem;
+      color: $dark-gray;
+
+      &:hover {
+        color: $ink;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: none;
+        transition: all 0.3s;
+      }
+    }
+  }
 }
 
 main {
@@ -69,27 +136,108 @@ main {
     text-align: center;
   }
 
-  #documents {
+  h2, h3 {
+    font-weight: 700;
+  }
 
+  .card {
+    padding: 1rem;
+    text-align: center;
+    border: none;
+  }
+
+  #documents {
     .card-row {
       max-width: 600px;
 
       .col {
-
         max-width: 300px;
 
         a {
           text-decoration: none;
-          color: $ink;
+        }
 
-          .card {
-            padding: 1rem;
-            text-align: center;
+        &:nth-child(1) .card {
+          background: $blue-card-background;
+          color: $blue-card-text;
 
+          &:hover {
+            background: $blue-card-background-2;
+          }
+        }
 
-            .card-title {
+        &:nth-child(2) .card {
+          background: $green-card-background;
+          color: $green-card-text;
 
+          &:hover {
+            background: $green-card-background-2;
+          }
+        }
+
+        &:nth-child(3) .card {
+          background: $orange-card-background;
+          color: $orange-card-text;
+
+          &:hover {
+            background: $orange-card-background-2;
+          }
+        }
+
+        &:nth-child(4) .card {
+          background: $purple-card-background;
+          color: $purple-card-text;
+
+          &:hover {
+            background: $purple-card-background-2;
+          }
+        }
+      }
+    }
+  }
+
+  #projects {
+    color: $white;
+    background: linear-gradient(100deg, #210047, $navy, #020758);
+
+    .card {
+      color: $ink;
+
+      .btn {
+        width: 160px;
+        margin: 0.2rem auto;
+        font-weight: 700;
+
+        &.status {
+          color: $white;
+
+          &.released {
+            background: $green;
+
+            &:hover {
+              background: linear-gradient(100deg, #439D43, #70C270);
             }
+          }
+
+          &.demo {
+            background: $navy;
+
+            &:hover {
+              background: linear-gradient(100deg, #3E50A3, #4E62BC);
+            }
+          }
+
+          &.development {
+            background: $orange;
+          }
+        }
+
+        &.repo {
+          background: #24292e;
+          color: $white;
+
+          &:hover {
+            background: linear-gradient(100deg, $dark-gray, $navy);
           }
         }
       }
@@ -97,16 +245,11 @@ main {
   }
 }
 
-
 .hidden {
   display: none;
 }
 
-/*
-***
-* QUICK LINK BOXES
-***
-*/
+/* *** QUICK LINK BOXES *** */
 
 /*.quick-links{
     padding:30px 0;
@@ -158,11 +301,8 @@ main {
 }*/
 
 
-/*
-***
-* FOOTER
-***
-*/
+/* *** FOOTER *** */
+
 footer {
   background-color: var(--white);
   padding-bottom: 0;
