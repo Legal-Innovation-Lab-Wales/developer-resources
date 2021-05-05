@@ -1,153 +1,335 @@
 <!doctype html>
-<html lang="en">
-
+<html lang="en-GB">
 <head>
-    <title>Legal Innovation Lab Wales - Developer Portal</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7COpen+Sans:400,600" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="apple-touch-icon" sizes="180x180"
-          href="https://intranet.swan.ac.uk/cdn/suds/images/icons/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32"
-          href="https://intranet.swan.ac.uk/cdn/suds/images/icons/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16"
-          href="https://intranet.swan.ac.uk/cdn/suds/images/icons/favicon/favicon-16x16.png">
-    <link rel="manifest" href="https://intranet.swan.ac.uk/cdn/suds/images/icons/favicon/site.webmanifest">
-    <link rel="mask-icon" href="https://intranet.swan.ac.uk/cdn/suds/images/icons/favicon/safari-pinned-tab.svg"
-          color="#5bbad5">
-    <link rel="shortcut icon" href="https://intranet.swan.ac.uk/cdn/suds/images/icons/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config"
-          content="https://intranet.swan.ac.uk/cdn/suds/images/icons/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#242F60">
-
-    <!-- Custom built theme - This already includes Bootstrap 4 -->
-    <link rel="stylesheet" href="https://intranet.swan.ac.uk/cdn/suds/css/suds.min.css">
-
-    <!-- Custom Legal Innovation Lab CSS -->
-    <link rel="stylesheet" href="assets/css/lilw-custom.css">
-    <!-- Custom Legal Innovation Lab JS -->
-    <script src="assets/js/lilw-custom.js"></script>
-
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" rel="stylesheet">
+    <script crossorigin="anonymous"
+            integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/30fa2950fc.js"></script>
+    <link href="assets/css/lilw-custom.css" rel="stylesheet">
+    <title>Legal Innovation Lab Wales - Developer Page</title>
 </head>
 <body>
-<header>
-    <h1 class="a11y-hidden">Legal Innovation Lab Wales - Developer Portal</h1>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-logo university-logo" href="https://swansea.ac.uk">
-                <picture>
-                    <source srcset="https://intranet.swan.ac.uk/cdn/suds/images/logo/application-custom/logo-white-en.svg"
-                            type="image/svg+xml">
-                    <img alt="Swansea University"
-                         src="https://intranet.swan.ac.uk/cdn/suds/images/logo/application-custom/logo-white-en.png"
-                         srcset="https://intranet.swan.ac.uk/cdn/suds/images/logo/application-custom/logo-white-en@2x.png">
-                </picture>
-            </a>
-            <!--            <a class="navbar-brand navbar-brand-fluid" href="#">Legal Innovation Lab Wales</a>-->
-            <a class="navbar-logo lilw-logo" href="https://legaltech.wales">
-                <picture>
-                    <img alt="Legal Innovation Lab Wales"
-                         src="assets/images/lilw-logo-white.png">
-                </picture>
-            </a>
-
+<header class="px-4 py-5 text-center">
+    <div class="header-content">
+        <div class="d-block mx-auto">
+            <img alt="Swansea University" class="mb-4" height="65" src="assets/images/su-logo-blue-2x.png"
+                 width="126">
+            <img alt="Legal Innovation Lab Wales" class="mb-4" height="65" src="assets/images/lilw-logo-blue.png"
+                 width="102">
         </div>
-        <!--<h3>
-            <button class="float-right btn btn-sm btn-secondary btn-rounded" onclick="toggleLanguageMode()">Toggle Welsh
-            </button>
-        </h3>-->
-        <!-- <div class="navbar-collapse collapse" id="navbarTogglerDemo02" style=""></div> -->
-    </nav>
+        <h3>Legal Innovation Lab Wales</h3>
+        <h1 class="display-5 fw-bold">Developer Page</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">
+                Welcome to the Legal Innovation Lab developer page. Here you'll find some links and resources that
+                should make building things with the lab loads easier.
+            </p>
+            <div class="social d-flex justify-content-center">
+                <a class="mx-2" href="https://legaltech.wales">
+                    <i class="fas fa-home"></i>
+                </a>
+                <a class="mx-2" href="mailto:legalinnovation@swansea.ac.uk">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a class="mx-2" href="https://twitter.com/LegalLabWales">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="mx-2" href="https://www.linkedin.com/company/legal-innovation-lab-wales/">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a class="mx-2" href="https://github.com/Legal-Innovation-Lab-Wales">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </div>
 </header>
-
-<main id="main">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="title text-center "><strong>Developer Portal</strong></h1>
-                <h4 class="text-center">Welcome to the Legal Innovation Lab developer portal. Here you'll find some links
-                    and resources that should make building things with the lab loads easier.</h4>
-
-
+<main>
+    <section class="row py-5" id="documents">
+        <div class="col-12 col-md-10 mx-auto">
+            <div class="title">
+                <h2>Documents</h2>
+                <p class="lead">These documents outline various aspects of our work and are often shared publicly. Their
+                    master versions live on Lucidchart and they can be edited on there. They are hosted with consistent
+                    file names and permalinked from media.legaltech.wales </p>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mx-auto card-row">
+                <div class="col">
+                    <a href="https://media.legaltech.wales/info/project-lifecycle.pdf" target="_blank">
+                        <div class="card h-100">
+                            <h4 class="card-title">Project Lifecycle</h4>
+                            <p class="small">Outlines the process each of our projects normally goes through from idea
+                                to prototype.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://media.legaltech.wales/info/five-ws.pdf" target="_blank">
+                        <div class="card h-100">
+                            <h4 class="card-title">Five Ws</h4>
+                            <p class="small">Extra information on how to shape an initial idea and what is trying to be
+                                accomplished.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://media.legaltech.wales/info/features.pdf" target="_blank">
+                        <div class="card h-100">
+                            <h4 class="card-title">Features</h4>
+                            <p class="small">A short guide which aims to assist with building up a feature list in a
+                                structured way.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://media.legaltech.wales/info/software-development.pdf" target="_blank">
+                        <div class="card h-100">
+                            <h4 class="card-title">Software Development</h4>
+                            <p class="small">An overview of the process which we follow when developing software.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://media.legaltech.wales/docs/LILW-Collaboration-Form.docx" target="_blank">
+                        <div class="card h-100">
+                            <h4 class="card-title">Collaboration Form</h4>
+                            <p class="small">Interested in Collaborating? Download & fill in this form, then get in
+                                touch.</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="row quick-links">
-            <!--SUDS-->
-            <div class="col-lg-4 col-sm-6 text-center">
-                <a href="https://intranet.swan.ac.uk/suds/">
-                    <div class="link-box">
-                        <i class="fa fa-4x fa-drafting-compass sr-icons"></i>
-                        <h3>SUDS</h3>
-                        <p>Swansea University Design System, information about the design language the university uses for software products.</p>
-                    </div>
-                </a>
+    </section>
+    <section class="row py-5" id="projects">
+        <div class="col">
+            <div class="title">
+                <h2>Projects</h2>
+                <p class="lead">These are the projects which we have worked on or contributed to.</p>
             </div>
-            <!--END SUDS-->
-            <!--UXPIN-->
-            <div class="col-lg-4 col-sm-6 text-center">
-                <a href="https://app.uxpin.com/design-system/ec0a7b2451bf6653f580/suds-software-university-design-system">
-					<div class="link-box">
-                        <i class="fa fa-4x fa-code sr-icons"></i>
-                        <h3>SUDS - UXPin</h3>
-                        <p>Resources and components to make building front end systems that bit quicker and easier hosted on UXPin.</p>
-                    </div>
-                </a>
-            </div>
-            <!--END UXPIN-->
-            <!--GIT HUB-->
-            <div class="col-lg-4  col-sm-6 text-center">
-                <a href="https://github.com/Legal-Innovation-Lab-Wales">
-                    <div class="link-box">
-                        <i class="fab fa-4x fa-github sr-icons"></i>
-                        <h3>GitHub</h3>
-                        <p>Various projects and resources will live here in the future, at the moment its just the code for this page!</p>
-                    </div>
-                </a>
-            </div>
-            <!--END GIT HUB-->
-            <!--STATUS-->
-            <!--<div class="col-lg-4 col-sm-6 text-center">
-                <a href="http://status.veeqo.com/">
-                    <div class="link-box">
-                        <i class="fa fa-4x fa-server sr-icons"></i>
-                        <h3>Status</h3>
-                        <p>Check the status of Veeqo. Including the API, the core app and integrations.</p>
-                    </div>
-                </a>
-            </div>-->
-            <!--END STATUS-->
-            <!--APP STORE-->
-            <!--<div class="col-lg-4 col-sm-6 text-center">
-                <a href="https://marketplace.veeqo.com">
-                    <div class="link-box">
-                        <i class="fa fa-4x fa-shopping-bag sr-icons"></i>
-                        <h3>Marketplace</h3>
-                        <p>Get your app listed on the Veeqo app store or see what's already been made.</p>
-                    </div>
-                </a>
-            </div>-->
-            <!--END APP STORE-->
-            <!--SIGN UP-->
-           <!-- <div class="col-lg-4 col-sm-6 text-center">
-                <a href="https://app.veeqo.com/register">
-                    <div class="link-box">
-                        <i class="fa fa-4x fa-pencil-square-o sr-icons"></i>
-                        <h3>Sign Up</h3>
-                        <p>Built an app and need to test it? Register for a Veeqo developer account.</p>
-                    </div>
-                </a>
-            </div>-->
-            <!--END SIGN UP-->
 
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mx-auto card-row">
+                <div class="col">
+                    <div class="card h-100">
+                        <h3 class="card-title">Expertise Directory</h3>
+                        <div class="description">
+                            <h5>Overview</h5>
+                            <p>A web application that collates the "Areas of Expertise" that live on individual staff
+                                member profiles into a single page and allows them to be filtered with a free text box
+                                and department dropdown.</p>
+                            <p>There are quite a few limitations to this work. As it is a web scraper it is dependent on
+                                the Swansea University website for its information, if the website structure changes it
+                                will stop working.</p>
+                            <p>At the moment it only covers the Hillary Rodham Clinton School of Law, the College of
+                                Science and the College of Arts and Humanities, the other colleges display their staff
+                                profiles in a different structure and so will need to be added in time.</p>
+                            <h5>Tech stack</h5>
+                            <p>A collection of web scraping python scripts are run daily by a GitHub Action, this
+                                generates a JSON file. The updated file is picked up by Netlify which hosts the website.
+                                The front end is a React web application that pulls the data out of the JSON into an
+                                HTML table.</p>
+                        </div>
+                        <a class="btn status released mt-auto" href="https://directoryofexpertise.legaltech.wales/">Released</a>
+                        <a class="btn repo" href="https://github.com/Legal-Innovation-Lab-Wales/expertise-directory">Source
+                            Code <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <h3 class="card-title">Scenario Platform</h3>
+                        <div class="description">
+                            <h5>Overview</h5>
+                            <p>A Tool to help user practice specific scenarios, such as interviewing a client,
+                                approaching a medical situation or facing something where they have performed poorly in
+                                the past.</p>
+                            <p> The key requirements were that it could have a <strong>branching non-linear structure
+                                and that each answer could influence a range of variables.</strong></p>
+                            <p>During the initial research we spoke with another partner who was looking for a very
+                                similar tool to allow people to practice challenging scenarios where they had acted
+                                illegally in the past with the aim of helping facilitate their rehabilitation journey
+                                and prevent reoffending.</p>
+                            <h5>Tech stack</h5>
+                            <p>Ruby on Rails web app with Devise for user authentication.</p>
+                        </div>
+                        <a class="btn status demo mt-auto" href="https://scenario-platform.legaltech.wales/">Demo</a>
+                        <a class="btn repo" href="https://github.com/Legal-Innovation-Lab-Wales/scenario-platform">Source
+                            Code <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <h3 class="card-title">Judiciary Tagger</h3>
+                        <div class="description">
+                            <h5>Overview</h5>
+                            <p>This repository contains the application code for the Judiciary Akn Tagger (JAT). This
+                                application contains 101 case law files from https://www.judiciary.uk tagged in the
+                                Akoma Ntoso XML standard.</p>
+                            <h5>Tech Stack</h5>
+                            <p>Composed of a Java back-end and React front-end, the data-sources for this application
+                                come from a combination of an Ontology Model, and the aforementioned XML files. The
+                                project structure is as outlined below</p>
+                            <p><strong>Note:</strong> This app goes into hibernation when not in use, if it hasn't
+                                loaded in about 60s give the page a refresh</p>
+                        </div>
+                        <a class="btn status released mt-auto" href="https://akn-judiciary-demo.legaltech.wales/">Released</a>
+                        <a class="btn repo" href="https://github.com/Legal-Innovation-Lab-Wales/judiciary-akn-tagger">Source
+                            Code <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <h3 class="card-title">Include Journey</h3>
+                        <div class="description">
+                            <h5>Overview</h5>
+                            <p><em>By Gemma Morgan</em> At present criminal justice agencies both in the UK and
+                                internationally do not fully
+                                realise the opportunities that digital technologies offer to improve service delivery
+                                and the lives of service users. As a result, there has been little digital innovation
+                                within the realms of offender rehabilitation. The Ministry of Justice (2019) estimate
+                                that the economic and social cost of reoffending is £18.1 billion per annum. For these
+                                reasons, this project seeks to develop digital technologies to support desistance from
+                                crime and improve the lives of people who have offended and their wider communities.</p>
+                            <p>Supporting people to desist from crime is a global issue. On a national level, this is
+                                evidenced by high percentages of re-offending rates and high prison populations.
+                                Supporting pro-social change in offenders is a challenge for statutory, private and
+                                third sector criminal justice organisations.</p>
+                            <p>The development and implementation of digital technologies in the area of offender
+                                rehabilitation are cutting edge. Currently, there is little to no innovation in this
+                                area. As such, a range of technology can be developed to support organisations and their
+                                service users.</p>
+                            <h5>Tech Stack</h5>
+                            <p>Ruby on Rails web app with Devise for user authentication.</p>
+                        </div>
+                        <div class="btn status development mt-auto">In Development</div>
+                        <a class="btn repo" href="https://github.com/Legal-Innovation-Lab-Wales/include-journey">Source
+                            Code <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <h3 class="card-title">Privacy Demo</h3>
+                        <div class="description">
+                            <h5>Overview</h5>
+                            <p>Privacy Policies suck. No one wants to read them. We're trying to make them better with
+                                this idea.</p>
+                            <p>Human readable information for humans and a link to a broad policy available for those
+                                who want and need it.</p>
+                            <h5>Tech Stack</h5>
+                            <p>HTML + CSS, Hosted on Netlify</p>
+                        </div>
+                        <a class="btn status released mt-auto"
+                           href="https://developer.legaltech.wales/privacy-demo.html">Released</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row">
+    </section>
+    <section class="row py-5" id="approach">
+        <div class="col">
+            <div class="title">
+                <h2>Our Approach</h2>
+                <p class="lead">More Coming Soon.</p>
+                <p>We'll soon be adding some additional articles here which discuss our approach to building
+                    software.</p>
+                <hr>
+            </div>
+            <div class="article col col-md-10 col-lg-8 col-xl-6 mx-auto">
+                <h2 class="text-center">How To Build a Feature</h2>
+                <p class="lead">A brief best-practice guide for how we build features at the Legal Innovation Lab
+                    Wales</p>
+                <p><em>Note: </em>This is a living guide. We follow these steps on a day-to-day basis. We will tweak and
+                    update this guide as we go along and learn form our mistakes</p>
+
+                <h4>Start on Jira</h4>
+
+                <p>After a feature is outlined or described by stakeholders it will be added to the <em>Backlog</em>
+                    column on Jira. This column is roughly prioritised with the more urgent tasks appearing towards the
+                    top.</p>
+
+                <p>When you come towards the end of the task you are working on, select a ticket from the top of the
+                    <em>Backlog</em>, assign it to yourself and move it to <em>Next Up</em>.</p>
+
+                <p>While in <em>Next Up</em>, you should expand the ticket description to include significantly greater
+                    information. The aim is to full describe the feature and how it is going to look when finished. You
+                    can ask for input from one or all of the rest of the team.</p>
+
+                <p>Each Team Member should then use the <b>Vote</b> functionality to say when they are happy with a
+                    ticket’s detail.</p>
+
+                <p>When you are happy with the detail on the ticket, and the team has indicated their agreement with
+                    votes, move the ticket to <em>In Progress</em>.</p>
+
+                <h4>Move to GitHub</h4>
+
+                <p><strong>Guides:</strong> <a href="https://guides.github.com/introduction/flow/">How and Why</a>, <a
+                        href="https://guides.github.com/introduction/git-handbook/">Handbook</a></p>
+
+                <p class="mb-0">Ensure your local branches are up to date then <em>create a new branch</em> for your
+                    work. The branch
+                    name should be prefixed with the type of ticket and then start with the ticket ID and the ticket
+                    title.</p>
+
+                <p class="mb-0"> Branch prefixes include: <code>feature/</code>, <code>bugfix/</code>,
+                    <code>hotfix/</code>, <code>refactor/</code>
+                    , <code>other/</code>.</p>
+
+                <p> Examples: <code>feature/dt-124-how-to-build-features</code>,
+                    <code>bugfix/sp-206-fix-broken-thing</code>, <code>hotfix/fix-for-this-issue</code></p>
+
+                <p>When working on a ticket, <b>commit regularly</b>. Each commit should contain one discrete change /
+                    improvement and should be made when the codebase is in a state which you want to remember. Each
+                    commit which directly relates to the task should have the ticket ID at the start of it.</p>
+
+                <p>When you’ve finished work on the ticket, push your code to GitHub and <b>create a pull request</b>
+                    (PR). Your PR title should contain the ticket ID and a short title, probably similar to the ticket
+                    title. The description of your PR should be an explanation of what you have done and how, including
+                    screenshots if there is a front end / UI component. Then request a review from the rest of the team.
+                    PRs are designed for the team to check your code makes sense, does everything its supposed to and
+                    meets our standards.</p>
+
+                <p><em>From the “How and Why” Guide:</em></p>
+                <blockquote>
+                    <p>Once a Pull Request has been opened, the person or team reviewing your changes may have questions
+                        or
+                        comments. Perhaps the coding style doesn't match project guidelines, the change is missing unit
+                        tests, or maybe everything looks great and props are in order. Pull Requests are designed to
+                        encourage and capture this type of conversation.</p>
+
+                    <p>You can also continue to push to your branch in light of discussion and feedback about your
+                        commits.
+                        If someone comments that you forgot to do something or if there is a bug in the code, you can
+                        fix it
+                        in your branch and push up the change. GitHub will show your new commits and any additional
+                        feedback
+                        you may receive in the unified Pull Request view.”</p>
+                </blockquote>
+                <p>We strongly recommend reading the guides, if you have questions following that don't hesitate to get
+                    in touch.</p>
+
+                <h4>Back on Jira</h4>
+
+                <p>When you code is up for PR, move the ticket to <em>Pending Review</em>. Now you should pick another
+                    ticket
+                    from the <em>Backlog</em> and move it to <em>Next Up</em>. You can also spend some time reviewing
+                    any other
+                    open PRs.
+                <p>
+            </div>
+        </div>
+    </section>
+
+    <section class="row py-5" id="other">
+        <div class="col-12 col-md-8 mx-auto">
+            <h2 class="text-center">Other Helpful Links</h2>
             <h3> Javascript for Swapping Between Welsh and English</h3>
-            <p><strong>Usage Note: </strong>add class="english-lang" to main body and class="english-lang" and class="welsh-lang hidden" to the respective sections. Then create a button to call the JS.  </p>
+            <p>Used to power the language switcher on the LegalTech.Wales Squarespace site</p>
+            <p><strong>Usage Note: </strong>add class="english-lang" to main body and class="english-lang" and
+                class="welsh-lang hidden" to the respective sections. Then create a button to call the JS. </p>
             <pre><code>
                 /*
                 Welsh Mode Toggle
@@ -189,76 +371,43 @@
                 }
             </code></pre>
         </div>
-		<div class="row">
-			<h3> Coming Soon</h3>
-			<ul>
-				<li>Information for partners</li>
-                <li>Products we use</li>
-			</ul>
-		</div>
-    </div>
+    </section>
 </main>
-
 <footer>
-    <div class="main">
-        <!--<div class="scroll-top-btn visible">
-            <svg width="15" height="19" viewBox="0 0 15 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <path d="M7.20515673,0.442955118 C7.01071075,0.450858935 6.82557512,0.530967566 6.68382717,0.668535665 L0.764214123,6.49892519 C0.535172672,6.69838728 0.432075553,7.01236005 0.496442985,7.3143975 C0.560810417,7.61643496 0.782046893,7.85681878 1.07105403,7.93873939 C1.36006116,8.02066 1.66926555,7.93063246 1.87414157,7.7049135 L6.43157093,3.21933108 L6.43157093,18.1552245 C6.42745388,18.4556027 6.58040235,18.7349995 6.8318494,18.8864284 C7.08329644,19.0378572 7.39428535,19.0378572 7.64573239,18.8864284 C7.89717944,18.7349995 8.05012791,18.4556027 8.04601086,18.1552245 L8.04601086,3.21933108 L12.6034402,7.7049135 C12.8083162,7.93063246 13.1175206,8.02066 13.4065278,7.93873939 C13.6955349,7.85681878 13.9167714,7.61643496 13.9811388,7.3143975 C14.0455062,7.01236005 13.9424091,6.69838728 13.7133677,6.49892519 L7.79375462,0.668535665 C7.63509362,0.514470745 7.4228184,0.433116121 7.20515673,0.442955118 Z"></path>
-            </svg>
-        </div>-->
+    <div class="links">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
                     <div class="footer-links-info">
                         <ul class="footer-links-list">
-                            <li class="footer-links-list-item"><a href="https://www.swansea.ac.uk/contact-us/">Contact Us</a></li>
-                            <li class="footer-links-list-item"><a href="https://www.swansea.ac.uk/jobs-at-swansea/">Jobs</a></li>
-                            <li class="footer-links-list-item"><a href="https://www.swansea.ac.uk/the-university/colleges/">Colleges</a></li>
-                            <li class="footer-links-list-item"><a href="https://www.swansea.ac.uk/press-office/">Press</a></li>
-                            <li class="footer-links-list-item"><a href="https://www.swansea.ac.uk/about-us/safety-and-security/health-and-safety/">Health &amp; Safety</a></li>
-                            <li class="footer-links-list-item"><a href="https://www.swansea.ac.uk/disclaimer-and-copyright/">Disclaimer &amp; Copyright</a></li>
-                            <li class="footer-links-list-item"><a href="https://www.swansea.ac.uk/privacyandcookies/">Privacy &amp; Cookies</a></li>
-                            <li class="footer-links-list-item"><a href="https://www.swansea.ac.uk/media/Modern-Slavery-Statement.pdf">Modern Slavery Statement</a></li>
-                            <li class="footer-links-list-item"><a href="https://www.swansea.ac.uk/the-university/accessibility/swansea-ac-uk/">Accessibility Statement</a></li>
+                            <li class="footer-links-list-item"><a href="https://www.swansea.ac.uk/contact-us/">Contact
+                                Us</a></li>
+                            <li class="footer-links-list-item"><a
+                                    href="https://www.swansea.ac.uk/jobs-at-swansea/">Jobs</a></li>
+                            <li class="footer-links-list-item"><a
+                                    href="https://www.swansea.ac.uk/the-university/colleges/">Colleges</a></li>
+                            <li class="footer-links-list-item"><a
+                                    href="https://www.swansea.ac.uk/press-office/">Press</a></li>
+                            <li class="footer-links-list-item"><a
+                                    href="https://www.swansea.ac.uk/about-us/safety-and-security/health-and-safety/">Health
+                                &amp; Safety</a></li>
+                            <li class="footer-links-list-item"><a
+                                    href="https://www.swansea.ac.uk/disclaimer-and-copyright/">Disclaimer &amp;
+                                Copyright</a></li>
+                            <li class="footer-links-list-item"><a href="https://www.swansea.ac.uk/privacyandcookies/">Privacy
+                                &amp; Cookies</a></li>
+                            <li class="footer-links-list-item"><a
+                                    href="https://www.swansea.ac.uk/media/Modern-Slavery-Statement.pdf">Modern Slavery
+                                Statement</a></li>
+                            <li class="footer-links-list-item"><a
+                                    href="https://www.swansea.ac.uk/the-university/accessibility/swansea-ac-uk/">Accessibility
+                                Statement</a></li>
                         </ul>
                         <ul class="footer-info-list">
-                            <li class="footer-info-list-item">Swansea University is a registered charity, No. 1138342</li>
+                            <li class="footer-info-list-item">Swansea University is a registered charity, No. 1138342
+                            </li>
                         </ul>
                     </div>
-                    <!--<div class="footer-social">
-                        <ul class="footer-social-list">
-                            <li class="footer-social-list-item">
-                                <a href="https://www.facebook.com/swanseauniversity/">
-                                    <img src="/_web/img/icons/24x24/facebook-white.png" alt="Facebook link">
-                                </a>
-                            </li>
-                            <li class="footer-social-list-item">
-                                <a href="https://www.instagram.com/swanseauni/?hl=en">
-                                    <img src="/_web/img/icons/24x24/instagram-white.png" alt="Instagram link">
-                                </a>
-                            </li>
-                            <li class="footer-social-list-item">
-                                <a href="https://twitter.com/SwanseaUni">
-                                    <img src="/_web/img/icons/24x24/twitter-white.png" alt="Twitter link">
-                                </a>
-                            </li>
-                            <li class="footer-social-list-item">
-                                <a href="https://www.youtube.com/user/SwanseaUniVideo">
-                                    <img src="/_web/img/icons/24x24/youtube-white.png" alt="youtube link">
-                                </a>
-                            </li>
-                            <li class="footer-social-list-item">
-                                <a href="https://www.flickr.com/photos/swanseauniversity/">
-                                    <img src="/_web/img/icons/24x24/flickr-white.png" alt="flickr link">
-                                </a>
-                            </li>
-                            <li class="footer-social-list-item">
-                                <a href="https://www.linkedin.com/school/swansea-university/">
-                                    <img src="/_web/img/icons/24x24/linkedin-white.png" alt="linkedin link">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>-->
                 </div>
             </div>
         </div>
@@ -266,43 +415,12 @@
     <div class="container logos">
         <div class="row">
             <div class="col">
-                <img src="assets/images/su-logo-blue-2x.png" alt="Swansea University">
-                <img src="assets/images/lilw-logo-blue.png" alt="Legal Innovation Lab Wales">
-                <img class="erdf" src="assets/images/erdf.png" alt="European Regional Development Fund">
+                <img alt="Swansea University" src="assets/images/su-logo-blue-2x.png">
+                <img alt="Legal Innovation Lab Wales" src="assets/images/lilw-logo-blue.png">
+                <img alt="European Regional Development Fund" class="erdf" src="assets/images/erdf.png">
             </div>
         </div>
-
     </div>
 </footer>
-
-
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-
-<!-- include if following js date picker being used
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
--->
-<script src="js/suds.js"></script>
-
-
-<script>
-    /* Call datepicker in your JS as follows if being used
-    (function ($) {
-        $('#datepicker').datepicker();
-    })(jQuery);
-    */
-</script>
-
-
 </body>
-
 </html>
