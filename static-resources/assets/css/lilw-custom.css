@@ -176,6 +176,34 @@ main #approach {
   color: #ffffff;
   background: linear-gradient(100deg, #0e182a, #210047);
 }
+main #approach .article {
+  max-width: 800px;
+}
+main #approach .article h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+main #approach .article p {
+  margin-bottom: 0.8rem;
+}
+main #approach .article p em {
+  font-weight: 700;
+}
+main #approach .article p a {
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  font-style: italic;
+}
+main #approach .article p a:hover {
+  text-decoration: underline;
+}
+main #approach .article blockquote {
+  color: #DDDDDD;
+  border-left: 0.2rem solid #DDDDDD;
+  padding-left: 0.5rem;
+}
 
 .hidden {
   display: none;
