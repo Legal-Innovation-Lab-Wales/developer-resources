@@ -38,6 +38,10 @@
 }
 
 /* *** General CSS *** */
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   position: relative;
 }
@@ -54,6 +58,14 @@ header::before {
 }
 header .header-content {
   position: relative;
+}
+header .section-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+}
+header .section-links a:hover {
+  color: #DDDDDD;
 }
 header .social {
   margin-top: 1rem;

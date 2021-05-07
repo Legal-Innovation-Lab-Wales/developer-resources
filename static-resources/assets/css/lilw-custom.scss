@@ -118,6 +118,10 @@ $red-card-text: #7b241c;
 
 /* *** General CSS *** */
 
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   position: relative;
 
@@ -135,6 +139,18 @@ header {
 
   .header-content {
     position: relative;
+  }
+
+  .section-links {
+    a {
+      text-decoration: none;
+      color: $white;
+      font-weight: 700;
+      &:hover {
+        color: $gray;
+
+      }
+    }
   }
 
   .social {
