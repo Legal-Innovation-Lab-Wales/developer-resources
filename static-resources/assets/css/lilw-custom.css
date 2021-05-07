@@ -81,6 +81,21 @@ main .title {
 main h2, main h3 {
   font-weight: 700;
 }
+main h2 .link-spacer {
+  margin-left: 45px;
+}
+main h2 button {
+  visibility: hidden;
+  border: none;
+}
+main h2:hover button {
+  visibility: visible;
+  color: #495087;
+  background-color: inherit;
+}
+main .hidden {
+  visibility: hidden;
+}
 main .card {
   padding: 1rem;
   text-align: center;

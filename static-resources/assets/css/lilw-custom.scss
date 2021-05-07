@@ -161,6 +161,29 @@ main {
     font-weight: 700;
   }
 
+  h2 {
+    .link-spacer {
+      margin-left: 45px;
+    }
+
+    button {
+      visibility: hidden;
+      border: none;
+    }
+
+    &:hover {
+      button {
+        visibility: visible;
+        color: $dark-gray;
+        background-color: inherit;
+      }
+    }
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
   .card {
     padding: 1rem;
     text-align: center;
