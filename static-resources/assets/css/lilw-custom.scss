@@ -104,6 +104,14 @@ $orange-card-background: $orange-card-light-1;
 $orange-card-background-2: linear-gradient(35deg, $orange-card-light-1, $orange-card-light-2);
 $orange-card-text: #6e2c00;
 
+// Pomegranate
+$red-card-light-1: #f2d7d5;
+$red-card-light-2: #e6b0aa;
+$red-card-light-3: #d98880;
+$red-card-background: $red-card-light-1;
+$red-card-background-2: linear-gradient(35deg, $red-card-light-1, $red-card-light-2);
+$red-card-text: #7b241c;
+
 .navbar > .container, .navbar > .container-fluid {
   justify-content: flex-start;
 }
@@ -190,16 +198,24 @@ main {
     border: none;
   }
 
+  section.row {
+    margin: 0;
+  }
   #documents {
+
     .card-row {
       max-width: 600px;
       @media (min-width: $breakpoint-xl) {
         max-width: 900px;
-
       }
 
       .col {
         max-width: 300px;
+        @media (max-width: $breakpoint-md) {
+          margin-left: auto;
+          margin-right: auto;
+
+        }
 
         a {
           text-decoration: none;
@@ -247,6 +263,15 @@ main {
 
           &:hover {
             background: $green-2-card-background-2;
+          }
+        }
+
+        &:nth-child(6) .card {
+          background: $red-card-background;
+          color: $red-card-text;
+
+          &:hover {
+            background: $red-card-background-2;
           }
         }
       }
@@ -440,7 +465,9 @@ footer {
         max-width: 160px;
 
         &.erdf {
-          margin-left: 48px;
+          @media (min-width: $breakpoint-md) {
+            margin-left: 48px;
+          }
         }
       }
     }

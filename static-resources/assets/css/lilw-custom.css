@@ -101,6 +101,9 @@ main .card {
   text-align: center;
   border: none;
 }
+main section.row {
+  margin: 0;
+}
 main #documents .card-row {
   max-width: 600px;
 }
@@ -111,6 +114,12 @@ main #documents .card-row {
 }
 main #documents .card-row .col {
   max-width: 300px;
+}
+@media (max-width: 768px) {
+  main #documents .card-row .col {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 main #documents .card-row .col a {
   text-decoration: none;
@@ -149,6 +158,13 @@ main #documents .card-row .col:nth-child(5) .card {
 }
 main #documents .card-row .col:nth-child(5) .card:hover {
   background: linear-gradient(35deg, #d5f5e3, #abebc6);
+}
+main #documents .card-row .col:nth-child(6) .card {
+  background: #f2d7d5;
+  color: #7b241c;
+}
+main #documents .card-row .col:nth-child(6) .card:hover {
+  background: linear-gradient(35deg, #f2d7d5, #e6b0aa);
 }
 main #projects {
   color: #ffffff;
@@ -304,8 +320,10 @@ footer .logos .col img {
   /*float: right;*/
   max-width: 160px;
 }
-footer .logos .col img.erdf {
-  margin-left: 48px;
+@media (min-width: 768px) {
+  footer .logos .col img.erdf {
+    margin-left: 48px;
+  }
 }
 
 /*# sourceMappingURL=lilw-custom.css.map */
