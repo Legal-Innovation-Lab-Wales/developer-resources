@@ -53,9 +53,12 @@
     <section class="row py-5" id="documents">
         <div class="col-12 col-md-10 mx-auto">
             <div class="title">
-                <h2><span class="link-spacer"></span>Documents<button class="copyLink" onclick="copyText('documents')"><i class="fas fa-link"></i></button></h2>
+                <h2><span class="link-spacer"></span>Documents
+                    <button class="copyLink" onclick="copyText('documents')"><i class="fas fa-link"></i></button>
+                </h2>
                 <p class="lead">These documents outline various aspects of our work and are often shared publicly. Their
-                    master versions live on Lucidchart and they can be edited there. They are hosted on media.legaltech.wales </p>
+                    master versions live on Lucidchart and they can be edited there. They are hosted on
+                    media.legaltech.wales </p>
             </div>
             <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mx-auto card-row">
                 <div class="col">
@@ -106,7 +109,8 @@
                     <a href="https://media.legaltech.wales/docs/LILW-Privacy-Policy.pdf" target="_blank">
                         <div class="card h-100">
                             <h4 class="card-title">Privacy Policy</h4>
-                            <p class="small">The overarching privacy policy for the lab. Mostly here to be a 6th card for balance.</p>
+                            <p class="small">The overarching privacy policy for the lab. Mostly here to be a 6th card
+                                for balance.</p>
                         </div>
                     </a>
                 </div>
@@ -116,7 +120,9 @@
     <section class="row py-5" id="projects">
         <div class="col">
             <div class="title">
-                <h2><span class="link-spacer"></span>Projects<button class="copyLink" onclick="copyText('projects')"><i class="fas fa-link"></i></button></h2>
+                <h2><span class="link-spacer"></span>Projects
+                    <button class="copyLink" onclick="copyText('projects')"><i class="fas fa-link"></i></button>
+                </h2>
                 <p class="lead">These are the projects which we have worked on or contributed to.</p>
             </div>
 
@@ -239,14 +245,18 @@
     <section class="row py-5" id="approach">
         <div class="col">
             <div class="title">
-                <h2><span class="link-spacer"></span>Our Approach<button class="copyLink" onclick="copyText('approach')"><i class="fas fa-link"></i></button></h2>
+                <h2><span class="link-spacer"></span>Our Approach
+                    <button class="copyLink" onclick="copyText('approach')"><i class="fas fa-link"></i></button>
+                </h2>
                 <p class="lead">More Coming Soon.</p>
                 <p>We'll soon be adding some additional articles here which discuss our approach to building
                     software.</p>
                 <hr>
             </div>
             <div class="article col col-md-10 col-lg-8 col-xl-6 mx-auto">
-                <h2 class="text-center"><span class="link-spacer"></span>How To Build a Feature<button class="copyLink" onclick="copyText('build-a-feature')"><i class="fas fa-link"></i></button></h2>
+                <h2 class="text-center"><span class="link-spacer"></span>How To Build a Feature
+                    <button class="copyLink" onclick="copyText('build-a-feature')"><i class="fas fa-link"></i></button>
+                </h2>
                 <p class="lead">A brief best-practice guide for how we build features at the Legal Innovation Lab
                     Wales</p>
                 <p><em>Note: </em>This is a living guide. We follow these steps on a day-to-day basis. We will tweak and
@@ -255,21 +265,19 @@
                 <h4>Start on Jira</h4>
 
                 <p>After a feature is outlined or described by stakeholders it will be added to the <em>Backlog</em>
-                    column on Jira. This column is roughly prioritised with the more urgent tasks appearing towards the
-                    top.</p>
+                    column on Jira. When creating the ticket, as much detail as possible should be given. We won’t
+                    always be able to provide a full user story, but give as much information as you can as early as you
+                    can. The backlog column is roughly prioritised with the more urgent tasks appearing towards the top.
+                </p>
 
                 <p>When you come towards the end of the task you are working on, select a ticket from the top of the
                     <em>Backlog</em>, assign it to yourself and move it to <em>Next Up</em>.</p>
 
-                <p>While in <em>Next Up</em>, you should expand the ticket description to include significantly greater
-                    information. The aim is to full describe the feature and how it is going to look when finished. You
-                    can ask for input from one or all of the rest of the team.</p>
+                <p>With the ticket in <em>Next Up</em>,there is the opportunity to refine and expand the feature
+                    description. The aim is to fully describe the feature as well as we can and how it is going to look
+                    when finished. You can ask for input from one or all of the rest of the team.</p>
 
-                <p>Each Team Member should then use the <b>Vote</b> functionality to say when they are happy with a
-                    ticket’s detail.</p>
-
-                <p>When you are happy with the detail on the ticket, and the team has indicated their agreement with
-                    votes, move the ticket to <em>In Progress</em>.</p>
+                <p>When you are happy with the detail on the ticket, move the ticket to <em>In Progress</em>.</p>
 
                 <h4>Move to GitHub</h4>
 
@@ -291,6 +299,11 @@
                 <p>When working on a ticket, <b>commit regularly</b>. Each commit should contain one discrete change /
                     improvement and should be made when the codebase is in a state which you want to remember. Each
                     commit which directly relates to the task should have the ticket ID at the start of it.</p>
+
+                <p>As you are working on the feature, build it to the best of your ability, leveraging your experience,
+                    creativity and ingenuity. If something comes up which you are uncertain about, or if you think of
+                    something which could be a good addition to the feature, go back to the ticket on Jira and ask about
+                    it there.</p>
 
                 <p>When you’ve finished work on the ticket, push your code to GitHub and <b>create a pull request</b>
                     (PR). Your PR title should contain the ticket ID and a short title, probably similar to the ticket
@@ -319,13 +332,37 @@
                     in touch.</p>
 
                 <h4>Back on Jira</h4>
-
                 <p>When you code is up for PR, move the ticket to <em>Pending Review</em>. Now you should pick another
                     ticket
                     from the <em>Backlog</em> and move it to <em>Next Up</em>. You can also spend some time reviewing
                     any other
                     open PRs.
                 <p>
+
+                <h4>GitHub - Reviewing Code</h4>
+                <p>When reviewing PRs we should do several things:</p>
+
+                <ol>
+                    <li>Go through all the code changes, leave comments
+                        <ol type="a">
+                            <li>anywhere there is something you don’t understand</li>
+
+                            <li>anywhere that you think something could be improved</li>
+                        </ol>
+                    </li>
+                    <li>Pull the branch and run it locally, double check everything works as intended.</li>
+                    <li>Think about what has been built, if it works as intended, meets the requirements and if there
+                        are any ways it could be improved. If you have any suggestions try and explain the How and Why
+                        in as much detail as possible.
+                    </li>
+                </ol>
+
+                <p>You can always get involved and collaborate. If there is a small bugfix, you can make the change and
+                    push the code onto the branch. If there are design or feature changes you think could work better,
+                    create another branch and an additional PR back to the feature branch.</p>
+                <p>There’s no rule that says the person who raises the PR has to be the sole contributor to it. If there
+                    is agreement about a feature change, it might make more sense for the person who has the vision for
+                    the changes to write the code, not the person who started on the branch.</p>
             </div>
         </div>
     </section>
