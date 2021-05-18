@@ -219,30 +219,39 @@ main #approach {
   color: #ffffff;
   background: linear-gradient(100deg, #0e182a, #210047);
 }
-main #approach .article {
-  max-width: 800px;
+main #approach a {
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
 }
-main #approach .article h4 {
+main #approach a:hover {
+  text-decoration: underline;
+}
+main .article {
+  max-width: 36rem;
+  font-size: 1.1rem;
+}
+main .article h4 {
   margin-top: 1.5rem;
   margin-bottom: 0;
   font-weight: 600;
 }
-main #approach .article p {
+main .article p {
   margin-bottom: 0.8rem;
 }
-main #approach .article p em {
+main .article p em {
   font-weight: 700;
 }
-main #approach .article p a {
+main .article p a {
   font-weight: 700;
   color: #ffffff;
   text-decoration: none;
   font-style: italic;
 }
-main #approach .article p a:hover {
+main .article p a:hover {
   text-decoration: underline;
 }
-main #approach .article blockquote {
+main .article blockquote {
   color: #DDDDDD;
   border-left: 0.2rem solid #DDDDDD;
   padding-left: 0.5rem;
