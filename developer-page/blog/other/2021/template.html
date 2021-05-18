@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/30fa2950fc.js"></script>
+    <link href="../../../assets/css/blog.css" rel="stylesheet">
+    <title>Legal Innovation Lab Wales - Developer Blog</title>
+</head>
+<body class="blog">
+<header>
+    <img alt="Legal Innovation Lab Wales, part of the Hilary Rodham Clinton School of Law" class="lab-logo"
+         src="../../../assets/images/LILW-SOL.png">
+    <nav>
+        <a href="https://legaltech.wales">
+            <i aria-hidden="true" class="fas fa-home"></i>
+        </a>
+        <a href="https://developer.legaltech.wales">
+            <i aria-hidden="true" class="fas fa-code"></i>
+        </a>
+        <a href="mailto:legalinnovation@swansea.ac.uk">
+            <i aria-hidden="true" class="fas fa-envelope"></i>
+        </a>
+        <a href="https://twitter.com/LegalLabWales">
+            <i aria-hidden="true" class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/legal-innovation-lab-wales/">
+            <i aria-hidden="true" class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Legal-Innovation-Lab-Wales">
+            <i aria-hidden="true" class="fab fa-github"></i>
+        </a>
+        <button id="theme-toggle">
+            <i class="fas fa-moon light"></i>
+            <i class="fas fa-sun dark"></i>
+        </button>
+    </nav>
+
+
+    <img alt="Author: Phil" class="author"
+         src="../../../assets/images/team/phil.jpg">
+
+    <h2 class="author">Phil Reynolds</h2>
+    <h3 class="date">May 18th, 2021</h3>
+
+
+</header>
+<main>
+    <article class="article">
+        <h1>Template Title</h1>
+        <h2 class="text-center">How To Build a Feature</h2>
+        <p class="lead">A brief best-practice guide for how we build features at the Legal Innovation Lab
+            Wales</p>
+        <p><em>Note: </em>This is a living guide. We follow these steps on a day-to-day basis. We will tweak and
+            update this guide as we go along and learn form our mistakes</p>
+
+        <h3>Start on Jira</h3>
+
+        <p>After a feature is outlined or described by stakeholders it will be added to the <em>Backlog</em>
+            column on Jira. When creating the ticket, as much detail as possible should be given. We won’t
+            always be able to provide a full user story, but give as much information as you can as early as you
+            can. The backlog column is roughly prioritised with the more urgent tasks appearing towards the top.
+        </p>
+
+        <h3>Teams</h3>
+
+        <p>MS Teams is our primary communication platform. We use it in a couple of different ways. There are
+            two main “Teams”; “Law - Legal Innovation Lab Wales” which is public within the Swansea.ac.uk domain
+            and “LILW - Project Team” which is private to the Legal Innovation Lab Team.</p>
+
+        <h4>Chats</h4>
+
+        <p>The main communication in teams happens in chats. <strong>These are informal conversations about a
+            range of topics</strong> with specific people or groups of people. We have a Dev Team chat and a
+            Legal Tech chat which are used most frequently.</p>
+
+        <h4>Channels</h4>
+
+        <p>Channels are a more structured way of having conversations around a specific topic. The nature of
+            channels is more persistent and asynchronous. We should use channels for <strong>discussions around
+                specific topics</strong> which aren’t necessarily related to a task in Jira.</p>
+
+        <h3>Planner</h3>
+
+        <p>We currently use MS planner for tracking all the project ideas which come to us. Every idea which we
+            discuss should get added to the “Initial Ideas” column and then progress through the chart as the
+            project progresses.</p>
+
+        <p>This is public within the Swansea.ac.uk domain so anyone can see what we are working on.</p>
+
+        <p>The cards link to further documents in OneDrive / Sharepoint which provide further detail on the
+            project.</p>
+
+        <p>Planner doesn’t feel like the best tool for this but its the best we have at the moment - if anyone
+            has any suggestions then please share!</p>
+
+        <h3>Jira</h3>
+
+        <p>Jira is our main software development project management tool. This is where the day-to-day of our
+            dev team happens. We have several boards where individual cards correspond to individual tasks.
+            These cards are often referred to interchangeably as tasks, issues or tickets.</p>
+
+        <p>The main Dev Team board is for general tasks which don’t relate to any specific project, or relate to
+            projects which are not mature enough to warrant their own board. We also have separate boards for
+            other ongoing projects, currently the Scenario Platform and the Include Journey.</p>
+
+        <p>On these project specific boards, each issue card should relate to one specific feature, bug or task.
+            This normally equates to one Pull Request on GitHub.</p>
+
+        <p>Jira is also where we have <strong>discussions related to specific tasks.</strong> Comments can guide
+            the conversation while the description can be updated collaboratively with improvements from the comments.
+        </p>
+
+        <h3>GitHub</h3>
+
+        <p>We use GitHub for version control, code repositories and peer reviews of our code.</p>
+    </article>
+
+</main>
+<footer>
+    <div class="logos">
+        <img alt="Swansea University" src="../../../assets/images/su-logo-blue-2x.png">
+        <img alt="Legal Innovation Lab Wales" src="../../../assets/images/lilw-logo-blue.png">
+        <img alt="European Regional Development Fund" class="erdf" src="../../../assets/images/erdf.png">
+    </div>
+</footer>
+<script>
+
+    const btn = document.querySelector("#theme-toggle");
+    // check to see if OS preferences for light or dark mode
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const prefersLightScheme = window.matchMedia("(prefers-color-scheme: light)");
+    console.log("prefers dark scheme: " + prefersDarkScheme.matches)
+
+    // check to see if local storage has a theme preference
+    let currentTheme = localStorage.getItem("theme");
+    console.log("current theme: " + currentTheme)
+
+    function setTheme() {
+        //if no local storage check against system preferences
+        if (currentTheme === null) {
+            if (prefersDarkScheme.matches) {
+                currentTheme = "dark"
+            } else if (prefersLightScheme.matches) {
+                currentTheme = "light"
+            } else {
+                // if no preferences, default to dark theme
+                currentTheme = "dark"
+            }
+            setTheme()
+        } else if (currentTheme === "dark") {
+            document.body.classList.remove("light-mode");
+            document.body.classList.add("dark-mode");
+        } else if (currentTheme === "light") {
+            document.body.classList.remove("dark-mode");
+            document.body.classList.add("light-mode");
+        }
+    }
+
+    btn.addEventListener("click", function () {
+        if (currentTheme === "dark") {
+            currentTheme = "light"
+            setTheme()
+            var theme = document.body.classList.contains("light-mode") ? "light" : "dark";
+        } else {
+            currentTheme = "dark";
+            setTheme()
+            var theme = document.body.classList.contains("dark-mode") ? "dark" : "light";
+        }
+        localStorage.setItem("theme", theme);
+    });
+
+    setTheme()
+
+</script>
+</body>
+</html>
