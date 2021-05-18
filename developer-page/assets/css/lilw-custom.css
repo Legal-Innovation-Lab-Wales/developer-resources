@@ -1,38 +1,5 @@
 /* *** Variables *** */
 /* University Colors */
-:root {
-  /*colors*/
-  --navy: #242F60;
-  --sky-blue: #93c9de;
-  --lime: #CAD401;
-  --gray: #DDDDDD;
-  --green: #378137;
-  --orange: #F2A53F;
-  --red: #E00000;
-  --white: #ffffff;
-  --light-gray: #fcfcfc;
-  --dark-gray: #495087;
-  /* University theme colours */
-  --ink: #212529;
-  --primary: var(--navy);
-  --primary-hover: #1A2144;
-  --primary-alt: var(--lime);
-  --primary-alt-hover: #A6AE01;
-  --secondary: var(--gray);
-  --secondary-hover: #CACACA;
-  --info: var(--sky-blue);
-  --info-hover: #76BAD5;
-  --success: var(--green);
-  --success-hover: #2C662C;
-  --warning: var(--orange);
-  --warning-hover: #F0941B;
-  --danger: var(--red);
-  --danger-hover: #BA0000;
-  --background: var(--light-gray);
-  --trout: var(--dark-gray);
-  --white-hover: #b3b3b3;
-}
-
 .navbar > .container, .navbar > .container-fluid {
   justify-content: flex-start;
 }
@@ -304,7 +271,7 @@ footer .links ul li a:hover {
   text-decoration: none;
   top: -2px;
   /*color: #b3b3b3;*/
-  color: var(--white-hover);
+  color: #b3b3b3;
 }
 footer .links ul li a:visited {
   color: #ffffff;
