@@ -20,6 +20,15 @@ $light-gray: #fcfcfc;
 $dark-gray: #495087;
 $white-hover: #b3b3b3;
 
+/* Page Colours */
+
+$projects-background: linear-gradient(100deg, #210047, $navy, #020758);
+$approach-background: linear-gradient(100deg, #0e182a, #210047);
+
+$green-grad: linear-gradient(100deg, #439D43, #70C270);
+$navy-grad: linear-gradient(100deg, #3E50A3, #4E62BC);
+$repo-button-grad: linear-gradient(100deg, $dark-gray, $navy);
+
 // Colours from https://htmlcolorcodes.com/color-chart/flat-design-color-chart/
 
 // Peter river
@@ -264,7 +273,7 @@ main {
 
   #projects {
     color: $white;
-    background: linear-gradient(100deg, #210047, $navy, #020758);
+    background: $projects-background;
 
     .card {
       color: $ink;
@@ -281,7 +290,7 @@ main {
             background: $green;
 
             &:hover {
-              background: linear-gradient(100deg, #439D43, #70C270);
+              background: $green-grad;
             }
           }
 
@@ -289,7 +298,7 @@ main {
             background: $navy;
 
             &:hover {
-              background: linear-gradient(100deg, #3E50A3, #4E62BC);
+              background: $navy-grad;
             }
           }
 
@@ -303,7 +312,7 @@ main {
           color: $white;
 
           &:hover {
-            background: linear-gradient(100deg, $dark-gray, $navy);
+            background: $repo-button-grad;
           }
         }
       }
@@ -312,7 +321,7 @@ main {
 
   #approach {
     color: $white;
-    background: linear-gradient(100deg, #0e182a, #210047);
+    background: $approach-background;
 
     a {
       font-weight: 700;
