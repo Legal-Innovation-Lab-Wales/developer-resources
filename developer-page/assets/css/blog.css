@@ -3,74 +3,86 @@ html {
   scroll-behavior: smooth;
   font-family: sans-serif;
 }
-html .dark-mode {
+html body {
+  margin: 0;
+}
+html body.dark-mode {
   background-color: #0e182a;
   background: linear-gradient(100deg, #0e182a, #210047);
   color: #ece9e6;
 }
-html .dark-mode .dark {
+html body.dark-mode .dark {
   display: block;
 }
-html .dark-mode .light {
+html body.dark-mode .light {
   display: none;
 }
-html .dark-mode nav a, html .dark-mode nav button {
+html body.dark-mode nav a, html body.dark-mode nav button {
   background: #ffffffe6;
   color: #495087;
 }
-html .dark-mode nav a:hover {
-  color: #212529;
+html body.dark-mode nav a:hover {
+  color: #05285a;
   background: #fff;
 }
-html .dark-mode nav button:hover {
-  color: #212529;
-  background: linear-gradient(100deg, #DDDDDD, #93c9de);
+html body.dark-mode nav button:hover {
+  color: #05285a;
+  background: linear-gradient(-45deg, #dfecf1, #f6f8f9);
 }
-html .dark-mode .author {
-  color: #b3b3b3;
+html body.dark-mode .author {
+  color: #c8bedc;
 }
-html .light-mode {
-  background-color: #DDDDDD;
-  background: linear-gradient(100deg, #DDDDDD, #93c9de);
-  color: #212529;
+html body.light-mode {
+  background-color: #dfecf1;
+  background: linear-gradient(-45deg, #dfecf1, #f6f8f9);
+  color: #05285a;
 }
-html .light-mode .light {
+html body.light-mode .light {
   display: block;
 }
-html .light-mode .dark {
+html body.light-mode .dark {
   display: none;
 }
-html .light-mode nav a, html .light-mode nav button {
+html body.light-mode .lab-logo {
+  background-color: #0e182a;
+  background: linear-gradient(100deg, #0e182a, #210047);
+  -webkit-box-shadow: 0 5px 10px 10px #0e182a;
+  box-shadow: 0 5px 10px 10px #0e182a;
+}
+html body.light-mode nav a, html body.light-mode nav button {
   background: #495087;
   color: #ece9e6;
 }
-html .light-mode nav a:hover {
+html body.light-mode nav a:hover {
   color: #0e182a;
 }
-html .light-mode nav button:hover {
+html body.light-mode nav button:hover {
   color: #ece9e6;
   background: linear-gradient(100deg, #0e182a, #210047);
 }
-html .light-mode .author {
+html body.light-mode .author {
   color: #495087;
 }
-html header {
+html body header {
   text-align: center;
 }
-html header img {
+html body header img {
   display: block;
   margin: 0 auto;
 }
-html header img.lab-logo {
+html body header img.lab-logo {
   width: 24rem;
 }
-html header img.author {
+html body header img.author {
   border-radius: 100%;
   height: 3.6rem;
   width: 3.6rem;
   margin: 1rem auto;
 }
-html header nav a, html header nav button {
+html body header nav {
+  margin: 2rem 0;
+}
+html body header nav a, html body header nav button {
   display: inline-block;
   text-align: center;
   height: 3rem;
@@ -79,35 +91,35 @@ html header nav a, html header nav button {
   border-radius: 100%;
   line-height: 3rem;
 }
-html header nav a:hover, html header nav button:hover {
+html body header nav a:hover, html body header nav button:hover {
   box-shadow: none;
   transition: all 0.3s;
 }
-html header h2, html header h3 {
+html body header h2, html body header h3 {
   margin: 0;
   font-weight: 400;
 }
-html header h2.author, html header h3.author {
+html body header h2.author, html body header h3.author {
   text-transform: uppercase;
   letter-spacing: 0.25rem;
 }
-html main {
-  max-width: 36rem;
+html body main {
+  max-width: 42rem;
   font-size: 1.1rem;
   margin: 0 auto;
 }
-html footer .logos {
+html body footer .logos {
   padding: 20px 0;
-  background-color: #ffffff;
+  background-color: #f6f8f9;
   text-align: center;
   margin: 0 auto;
 }
-html footer .logos img {
+html body footer .logos img {
   max-width: 160px;
   vertical-align: middle;
 }
 @media (min-width: 768px) {
-  html footer .logos img.erdf {
+  html body footer .logos img.erdf {
     margin-left: 48px;
   }
 }

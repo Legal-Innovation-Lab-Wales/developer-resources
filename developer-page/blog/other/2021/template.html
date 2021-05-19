@@ -48,8 +48,8 @@
 <main>
     <article class="article">
         <h1>Template Title</h1>
-        <h2 class="text-center">How To Build a Feature</h2>
-        <p class="lead">A brief best-practice guide for how we build features at the Legal Innovation Lab
+        <h2>How To Build a Feature</h2>
+        <p>A brief best-practice guide for how we build features at the Legal Innovation Lab
             Wales</p>
         <p><em>Note: </em>This is a living guide. We follow these steps on a day-to-day basis. We will tweak and
             update this guide as we go along and learn form our mistakes</p>
@@ -130,11 +130,9 @@
     // check to see if OS preferences for light or dark mode
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
     const prefersLightScheme = window.matchMedia("(prefers-color-scheme: light)");
-    console.log("prefers dark scheme: " + prefersDarkScheme.matches)
 
     // check to see if local storage has a theme preference
     let currentTheme = localStorage.getItem("theme");
-    console.log("current theme: " + currentTheme)
 
     function setTheme() {
         //if no local storage check against system preferences
@@ -161,13 +159,11 @@
         if (currentTheme === "dark") {
             currentTheme = "light"
             setTheme()
-            var theme = document.body.classList.contains("light-mode") ? "light" : "dark";
         } else {
             currentTheme = "dark";
             setTheme()
-            var theme = document.body.classList.contains("dark-mode") ? "dark" : "light";
         }
-        localStorage.setItem("theme", theme);
+        localStorage.setItem("theme", currentTheme);
     });
 
     setTheme()
