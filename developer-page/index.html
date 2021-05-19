@@ -513,6 +513,133 @@
                     }
                 }
             </code></pre>
+            <hr>
+            <h3> Javascript for Theme Toggle</h3>
+            <p>Used to power the theme toggle on the developer blog</p>
+            <p><em>Usage: </em>Use css classes .dark-mode and .light-mode to define the styles. Example is below the js.
+                The script first checks to see if there is a local theme preference stored, then looks for any OS
+                preference. When the toggle button is clicked it stores the preference in local storage </p>
+            <pre><code>
+                const btn = document.querySelector("#theme-toggle");
+                // check to see if OS preferences for light or dark mode
+                const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+                const prefersLightScheme = window.matchMedia("(prefers-color-scheme: light)");
+
+                // check to see if local storage has a theme preference
+                let currentTheme = localStorage.getItem("theme");
+
+                function setTheme() {
+                    //if no local storage check against system preferences
+                    if (currentTheme === null) {
+                        if (prefersDarkScheme.matches) {
+                            currentTheme = "dark"
+                        } else if (prefersLightScheme.matches) {
+                            currentTheme = "light"
+                        } else {
+                            // if no preferences, default to dark theme
+                            currentTheme = "dark"
+                        }
+                        setTheme()
+                    } else if (currentTheme === "dark") {
+                        document.body.classList.remove("light-mode");
+                        document.body.classList.add("dark-mode");
+                    } else if (currentTheme === "light") {
+                        document.body.classList.remove("dark-mode");
+                        document.body.classList.add("light-mode");
+                    }
+                }
+
+                btn.addEventListener("click", function () {
+                    if (currentTheme === "dark") {
+                        currentTheme = "light"
+                        setTheme()
+                    } else {
+                        currentTheme = "dark";
+                        setTheme()
+                    }
+                    localStorage.setItem("theme", currentTheme);
+                });
+
+                setTheme()
+            </code></pre>
+            <p>SCSS</p>
+            <pre><code>
+                &.dark-mode {
+                  background-color: $dark;
+                  background: $dark-background;
+                  color: $ink-light;
+
+                  .dark {
+                    display: block;
+                  }
+
+                  .light {
+                    display: none;
+                  }
+
+                  nav {
+                    a, button {
+                      background: #ffffffe6;
+                      color: $dark-gray;
+                    }
+
+                    a:hover {
+                      color: $ink-dark;
+                      background: #fff;
+                    }
+
+                    button:hover {
+                      color: $ink-dark;
+                      background: $light-background;
+                    }
+                  }
+
+                  .author {
+                    color: $medium-gray;
+                  }
+                }
+
+                &.light-mode {
+                  background-color: $gray;
+                  background: $light-background;
+                  color: $ink-dark;
+
+                  .light {
+                    display: block;
+                  }
+
+                  .dark {
+                    display: none;
+                  }
+
+                  .lab-logo {
+                    background-color: $dark;
+                    background: $dark-background;
+                    -webkit-box-shadow: 0 5px 10px 10px $dark;
+                    box-shadow: 0 5px 10px 10px $dark;
+                  }
+
+                  nav {
+                    a, button {
+                      background: $dark-gray;
+                      color: $ink-light;
+                    }
+
+                    a:hover {
+                      color: $dark;
+                    }
+
+                    button:hover {
+                      color: $ink-light;
+                      background: $dark-background;
+                    }
+                  }
+
+                  .author {
+                    color: $dark-gray;
+                  }
+                }
+            </code></pre>
         </div>
     </section>
 </main>
