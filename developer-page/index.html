@@ -10,6 +10,7 @@
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/30fa2950fc.js"></script>
+    <link href="assets/css/prism.css" rel="stylesheet">
     <link href="assets/css/lilw-custom.css" rel="stylesheet">
     <title>Legal Innovation Lab Wales - Developer Page</title>
 </head>
@@ -473,45 +474,45 @@
             <p>Used to power the language switcher on the LegalTech.Wales Squarespace site</p>
             <p><strong>Usage Note: </strong>add class="english-lang" to main body and class="english-lang" and
                 class="welsh-lang hidden" to the respective sections. Then create a button to call the JS. </p>
-            <pre><code>
-                /*
-                Welsh Mode Toggle
-                 */
-                function toggleLanguageMode () {
-                    // Toggle from English to Welsh
-                    var welshSections = document.getElementsByClassName("welsh-lang");
-                    var englishSections = document.getElementsByClassName( "english-lang");
-                    if ((document.getElementsByTagName("BODY")[0].className) === 'english-lang') {
-                        // Update Tag in Body declaration
-                        document.getElementsByTagName("BODY")[0].classList.add('welsh-lang');
-                        document.getElementsByTagName("BODY")[0].classList.remove('english-lang');
-                        // Hide English and un-hide Welsh
-                        [].forEach.call(englishSections, function(add_hidden){
-                            add_hidden.classList.add("hidden");
-                        });
+            <pre><code class="language-js">
+/*
+Welsh Mode Toggle
+ */
+function toggleLanguageMode () {
+    // Toggle from English to Welsh
+    var welshSections = document.getElementsByClassName("welsh-lang");
+    var englishSections = document.getElementsByClassName( "english-lang");
+    if ((document.getElementsByTagName("BODY")[0].className) === 'english-lang') {
+        // Update Tag in Body declaration
+        document.getElementsByTagName("BODY")[0].classList.add('welsh-lang');
+        document.getElementsByTagName("BODY")[0].classList.remove('english-lang');
+        // Hide English and un-hide Welsh
+        [].forEach.call(englishSections, function(add_hidden){
+            add_hidden.classList.add("hidden");
+        });
 
-                        [].forEach.call(welshSections, function(rm_hidden){
-                            rm_hidden.classList.remove("hidden");
-                        });
+        [].forEach.call(welshSections, function(rm_hidden){
+            rm_hidden.classList.remove("hidden");
+        });
 
-                    }
-                    // Toggle from Welsh To English
-                    else if ((document.getElementsByTagName("BODY")[0].className) === 'welsh-lang') {
-                        // Update Tag in Body declaration
-                        document.getElementsByTagName("BODY")[0].classList.add('english-lang');
-                        document.getElementsByTagName("BODY")[0].classList.remove('welsh-lang');
-                        // Hide Welsh and un-hide English
-                        [].forEach.call(welshSections, function(add_hidden){
-                            add_hidden.classList.add("hidden");
-                        });
+    }
+    // Toggle from Welsh To English
+    else if ((document.getElementsByTagName("BODY")[0].className) === 'welsh-lang') {
+        // Update Tag in Body declaration
+        document.getElementsByTagName("BODY")[0].classList.add('english-lang');
+        document.getElementsByTagName("BODY")[0].classList.remove('welsh-lang');
+        // Hide Welsh and un-hide English
+        [].forEach.call(welshSections, function(add_hidden){
+            add_hidden.classList.add("hidden");
+        });
 
-                        [].forEach.call(englishSections, function(rm_hidden){
-                            rm_hidden.classList.remove("hidden");
-                        });
-                    } else {
-                        alert("Somethings gone wrong with the Language, Sorry!")
-                    }
-                }
+        [].forEach.call(englishSections, function(rm_hidden){
+            rm_hidden.classList.remove("hidden");
+        });
+    } else {
+        alert("Somethings gone wrong with the Language, Sorry!")
+    }
+}
             </code></pre>
             <hr>
             <h3> Javascript for Theme Toggle</h3>
@@ -519,126 +520,126 @@
             <p><em>Usage: </em>Use css classes .dark-mode and .light-mode to define the styles. Example is below the js.
                 The script first checks to see if there is a local theme preference stored, then looks for any OS
                 preference. When the toggle button is clicked it stores the preference in local storage </p>
-            <pre><code>
-                const btn = document.querySelector("#theme-toggle");
-                // check to see if OS preferences for light or dark mode
-                const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-                const prefersLightScheme = window.matchMedia("(prefers-color-scheme: light)");
+            <pre><code class="language-js">
+const btn = document.querySelector("#theme-toggle");
+// check to see if OS preferences for light or dark mode
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+const prefersLightScheme = window.matchMedia("(prefers-color-scheme: light)");
 
-                // check to see if local storage has a theme preference
-                let currentTheme = localStorage.getItem("theme");
+// check to see if local storage has a theme preference
+let currentTheme = localStorage.getItem("theme");
 
-                function setTheme() {
-                    //if no local storage check against system preferences
-                    if (currentTheme === null) {
-                        if (prefersDarkScheme.matches) {
-                            currentTheme = "dark"
-                        } else if (prefersLightScheme.matches) {
-                            currentTheme = "light"
-                        } else {
-                            // if no preferences, default to dark theme
-                            currentTheme = "dark"
-                        }
-                        setTheme()
-                    } else if (currentTheme === "dark") {
-                        document.body.classList.remove("light-mode");
-                        document.body.classList.add("dark-mode");
-                    } else if (currentTheme === "light") {
-                        document.body.classList.remove("dark-mode");
-                        document.body.classList.add("light-mode");
-                    }
-                }
+function setTheme() {
+    //if no local storage check against system preferences
+    if (currentTheme === null) {
+        if (prefersDarkScheme.matches) {
+            currentTheme = "dark"
+        } else if (prefersLightScheme.matches) {
+            currentTheme = "light"
+        } else {
+            // if no preferences, default to dark theme
+            currentTheme = "dark"
+        }
+        setTheme()
+    } else if (currentTheme === "dark") {
+        document.body.classList.remove("light-mode");
+        document.body.classList.add("dark-mode");
+    } else if (currentTheme === "light") {
+        document.body.classList.remove("dark-mode");
+        document.body.classList.add("light-mode");
+    }
+}
 
-                btn.addEventListener("click", function () {
-                    if (currentTheme === "dark") {
-                        currentTheme = "light"
-                        setTheme()
-                    } else {
-                        currentTheme = "dark";
-                        setTheme()
-                    }
-                    localStorage.setItem("theme", currentTheme);
-                });
+btn.addEventListener("click", function () {
+    if (currentTheme === "dark") {
+        currentTheme = "light"
+        setTheme()
+    } else {
+        currentTheme = "dark";
+        setTheme()
+    }
+    localStorage.setItem("theme", currentTheme);
+});
 
-                setTheme()
+setTheme()
             </code></pre>
             <p>SCSS</p>
-            <pre><code>
-                &.dark-mode {
-                  background-color: $dark;
-                  background: $dark-background;
-                  color: $ink-light;
+            <pre><code class="language-css">
+&.dark-mode {
+  background-color: $dark;
+  background: $dark-background;
+  color: $ink-light;
 
-                  .dark {
-                    display: block;
-                  }
+  .dark {
+    display: block;
+  }
 
-                  .light {
-                    display: none;
-                  }
+  .light {
+    display: none;
+  }
 
-                  nav {
-                    a, button {
-                      background: #ffffffe6;
-                      color: $dark-gray;
-                    }
+  nav {
+    a, button {
+      background: #ffffffe6;
+      color: $dark-gray;
+    }
 
-                    a:hover {
-                      color: $ink-dark;
-                      background: #fff;
-                    }
+    a:hover {
+      color: $ink-dark;
+      background: #fff;
+    }
 
-                    button:hover {
-                      color: $ink-dark;
-                      background: $light-background;
-                    }
-                  }
+    button:hover {
+      color: $ink-dark;
+      background: $light-background;
+    }
+  }
 
-                  .author {
-                    color: $medium-gray;
-                  }
-                }
+  .author {
+    color: $medium-gray;
+  }
+}
 
-                &.light-mode {
-                  background-color: $gray;
-                  background: $light-background;
-                  color: $ink-dark;
+&.light-mode {
+  background-color: $gray;
+  background: $light-background;
+  color: $ink-dark;
 
-                  .light {
-                    display: block;
-                  }
+  .light {
+    display: block;
+  }
 
-                  .dark {
-                    display: none;
-                  }
+  .dark {
+    display: none;
+  }
 
-                  .lab-logo {
-                    background-color: $dark;
-                    background: $dark-background;
-                    -webkit-box-shadow: 0 5px 10px 10px $dark;
-                    box-shadow: 0 5px 10px 10px $dark;
-                  }
+  .lab-logo {
+    background-color: $dark;
+    background: $dark-background;
+    -webkit-box-shadow: 0 5px 10px 10px $dark;
+    box-shadow: 0 5px 10px 10px $dark;
+  }
 
-                  nav {
-                    a, button {
-                      background: $dark-gray;
-                      color: $ink-light;
-                    }
+  nav {
+    a, button {
+      background: $dark-gray;
+      color: $ink-light;
+    }
 
-                    a:hover {
-                      color: $dark;
-                    }
+    a:hover {
+      color: $dark;
+    }
 
-                    button:hover {
-                      color: $ink-light;
-                      background: $dark-background;
-                    }
-                  }
+    button:hover {
+      color: $ink-light;
+      background: $dark-background;
+    }
+  }
 
-                  .author {
-                    color: $dark-gray;
-                  }
-                }
+  .author {
+    color: $dark-gray;
+  }
+}
             </code></pre>
         </div>
     </section>
@@ -702,5 +703,6 @@
         document.body.removeChild(text);
     }
 </script>
+<script src="assets/js/prism.js"></script>
 </body>
 </html>
