@@ -132,6 +132,9 @@ html body main article p.subheading {
   font-size: 1.4rem;
   font-weight: 200;
 }
+html body main article pre {
+  max-height: 36rem;
+}
 html body footer {
   margin-top: 5rem;
 }

@@ -374,7 +374,9 @@ main {
 .hidden {
   display: none;
 }
-
+pre {
+  max-height: 36rem;
+}
 /* *** FOOTER *** */
 
 footer {

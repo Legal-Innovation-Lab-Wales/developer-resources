@@ -229,6 +229,10 @@ main article blockquote {
   display: none;
 }
 
+pre {
+  max-height: 36rem;
+}
+
 /* *** FOOTER *** */
 footer {
   background-color: #ffffff;
