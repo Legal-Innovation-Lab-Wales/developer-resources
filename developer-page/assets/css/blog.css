@@ -32,6 +32,13 @@ html body.dark-mode nav button:hover {
 html body.dark-mode .author {
   color: #c8bedc;
 }
+html body.dark-mode article a {
+  color: #03DAC6;
+  text-decoration: none;
+}
+html body.dark-mode article a:hover {
+  color: #03DAC6bb;
+}
 html body.light-mode {
   background-color: #dfecf1;
   background: linear-gradient(-45deg, #dfecf1, #f6f8f9);
@@ -62,6 +69,13 @@ html body.light-mode nav button:hover {
 }
 html body.light-mode .author {
   color: #495087;
+}
+html body.light-mode article a {
+  color: #6200EEbb;
+  text-decoration: none;
+}
+html body.light-mode article a:hover {
+  color: #3700B3;
 }
 html body header {
   text-align: center;

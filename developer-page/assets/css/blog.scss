@@ -23,6 +23,12 @@ $dark-background: linear-gradient(100deg, $dark, #210047);
 //$light-background: linear-gradient(100deg, #d5f2ff, #fffffb 15%, #fffffb 85%, #d5f2ff);
 $light-background: linear-gradient(-45deg, $light, $white);
 
+$dark-link: #03DAC6;
+$dark-link-hover: #03DAC6bb;
+
+$light-link: #6200EEbb;
+$light-link-hover: #3700B3;
+
 html {
   scroll-behavior: smooth;
   font-family: sans-serif;
@@ -62,6 +68,15 @@ html {
 
       .author {
         color: $medium-gray;
+      }
+      article {
+        a {
+          color: $dark-link;
+          text-decoration: none;
+          &:hover {
+            color: $dark-link-hover;
+          }
+        }
       }
     }
 
@@ -103,6 +118,15 @@ html {
 
       .author {
         color: $dark-gray;
+      }
+      article {
+        a {
+          color: $light-link;
+          text-decoration: none;
+          &:hover {
+            color: $light-link-hover;
+          }
+        }
       }
     }
 
