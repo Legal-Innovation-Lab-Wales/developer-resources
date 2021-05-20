@@ -133,112 +133,112 @@ let currentTheme = localStorage.getItem("theme");</code></pre>
             additional styling we want just needs to use these as parents, the scss we use for this is here:</p>
 
         <pre><code class="language-scss">&.dark-mode {
-      background-color: $dark;
-      background: $dark-background;
-      color: $ink-light;
+  background-color: $dark;
+  background: $dark-background;
+  color: $ink-light;
 
-      .dark {
-        display: block;
-      }
+  .dark {
+    display: block;
+  }
 
-      .light {
-        display: none;
-      }
+  .light {
+    display: none;
+  }
 
-      nav {
-        a, button {
-          background: #ffffffe6;
-          color: $dark-gray;
-        }
+  nav {
+    a, button {
+      background: #ffffffe6;
+      color: $dark-gray;
+    }
 
-        a:hover {
-          color: $ink-dark;
-          background: #fff;
-        }
+    a:hover {
+      color: $ink-dark;
+      background: #fff;
+    }
 
-        button:hover {
-          color: $ink-dark;
-          background: $light-background;
-        }
-      }
+    button:hover {
+      color: $ink-dark;
+      background: $light-background;
+    }
+  }
 
-      .author {
-        color: $medium-gray;
-      }
+  .author {
+    color: $medium-gray;
+  }
 
-      article {
-        a {
-          color: $dark-link;
-          text-decoration: none;
+  article {
+    a {
+      color: $dark-link;
+      text-decoration: none;
 
-          &:hover {
-            color: $dark-link-hover;
-          }
-        }
-
-        code.inline {
-          color: $medium-gray;
-        }
+      &:hover {
+        color: $dark-link-hover;
       }
     }
 
-    &.light-mode {
-      background-color: $gray;
-      background: $light-background;
-      color: $ink-dark;
+    code.inline {
+      color: $medium-gray;
+    }
+  }
+}
 
-      .light {
-        display: block;
+&.light-mode {
+  background-color: $gray;
+  background: $light-background;
+  color: $ink-dark;
+
+  .light {
+    display: block;
+  }
+
+  .dark {
+    display: none;
+  }
+
+  .lab-logo {
+    background-color: $dark;
+    background: $dark-background;
+    -webkit-box-shadow: 0 5px 10px 10px $dark;
+    box-shadow: 0 5px 10px 10px $dark;
+  }
+
+  nav {
+    a, button {
+      background: $dark-gray;
+      color: $ink-light;
+    }
+
+    a:hover {
+      color: $dark;
+    }
+
+    button:hover {
+      color: $ink-light;
+      background: $dark-background;
+    }
+  }
+
+  .author {
+    color: $dark-gray;
+  }
+
+  article {
+    a {
+      color: $light-link;
+      text-decoration: none;
+
+      &:hover {
+        color: $light-link-hover;
       }
+    }
 
-      .dark {
-        display: none;
-      }
+    code.inline {
+      color: $dark-gray;
+    }
+  }
+}</code></pre>
 
-      .lab-logo {
-        background-color: $dark;
-        background: $dark-background;
-        -webkit-box-shadow: 0 5px 10px 10px $dark;
-        box-shadow: 0 5px 10px 10px $dark;
-      }
-
-      nav {
-        a, button {
-          background: $dark-gray;
-          color: $ink-light;
-        }
-
-        a:hover {
-          color: $dark;
-        }
-
-        button:hover {
-          color: $ink-light;
-          background: $dark-background;
-        }
-      }
-
-      .author {
-        color: $dark-gray;
-      }
-
-      article {
-        a {
-          color: $light-link;
-          text-decoration: none;
-
-          &:hover {
-            color: $light-link-hover;
-          }
-        }
-
-        code.inline {
-          color: $dark-gray;
-        }
-      }
-    }</code></pre>
-        
-        <p>You can also view this on <a href="https://github.com/Legal-Innovation-Lab-Wales">
+        <p>You can also view this on <a href="https://github.com/Legal-Innovation-Lab-Wales/developer-resources/blob/main/developer-page/assets/js/themeToggle.js">
             GitHub <i aria-hidden="true" class="fab fa-github"></i>
         </a></p>
         <p>If you have any questions, thoughts or suggestions, please get in touch!</p>
