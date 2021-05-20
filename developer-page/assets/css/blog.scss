@@ -69,10 +69,12 @@ html {
       .author {
         color: $medium-gray;
       }
+
       article {
         a {
           color: $dark-link;
           text-decoration: none;
+
           &:hover {
             color: $dark-link-hover;
           }
@@ -119,10 +121,12 @@ html {
       .author {
         color: $dark-gray;
       }
+
       article {
         a {
           color: $light-link;
           text-decoration: none;
+
           &:hover {
             color: $light-link-hover;
           }
