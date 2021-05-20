@@ -76,21 +76,40 @@ html body header img.lab-logo {
 }
 html body header img.author {
   border-radius: 100%;
-  height: 3.6rem;
-  width: 3.6rem;
-  margin: 1rem auto;
+  height: 3rem;
+  width: 3rem;
+  margin: 0.2rem auto;
+}
+@media (min-width: 992px) {
+  html body header img.author {
+    height: 3.6rem;
+    width: 3.6rem;
+    margin: 1rem auto;
+  }
 }
 html body header nav {
-  margin: 2rem 0;
+  margin: 1.4rem 0;
+}
+@media (min-width: 992px) {
+  html body header nav {
+    margin: 2rem 0;
+  }
 }
 html body header nav a, html body header nav button {
   display: inline-block;
   text-align: center;
   height: 3rem;
   width: 3rem;
+  line-height: 3rem;
   box-shadow: 6px 4px 8px 0 #0006;
   border-radius: 100%;
-  line-height: 3rem;
+}
+@media (max-width: 370px) {
+  html body header nav a, html body header nav button {
+    height: 2.4rem;
+    width: 2.4rem;
+    line-height: 2.4rem;
+  }
 }
 html body header nav a:hover, html body header nav button:hover {
   box-shadow: none;
@@ -106,31 +125,59 @@ html body header h2.author, html body header h3.author {
 }
 html body main {
   max-width: 42rem;
-  font-size: 1.1rem;
   margin: 0 auto;
+}
+html body main article {
+  padding: 0 0.5rem;
 }
 html body main article h1 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 1.6rem;
+  margin: 1rem 0;
 }
 html body main article h2, html body main article h3, html body main article h4 {
   margin-bottom: 0;
 }
 html body main article h2 {
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 html body main article h3 {
-  font-size: 1.6rem;
-}
-html body main article h4 {
   font-size: 1.2rem;
 }
+html body main article h4 {
+  font-size: 1.1rem;
+}
 html body main article p {
+  font-size: 1.1rem;
   margin-top: 0;
 }
 html body main article p.subheading {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 200;
+}
+@media (min-width: 992px) {
+  html body main article {
+    padding: 0;
+  }
+  html body main article h1 {
+    font-size: 2.8rem;
+  }
+  html body main article h2 {
+    font-size: 1.8rem;
+  }
+  html body main article h3 {
+    font-size: 1.6rem;
+  }
+  html body main article h4 {
+    font-size: 1.4rem;
+  }
+  html body main article p {
+    margin-top: 0;
+  }
+  html body main article p.subheading {
+    font-size: 1.4rem;
+    font-weight: 200;
+  }
 }
 html body main article pre {
   max-height: 36rem;
