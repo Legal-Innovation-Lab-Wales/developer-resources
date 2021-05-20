@@ -79,6 +79,9 @@ html {
             color: $dark-link-hover;
           }
         }
+        code.inline {
+          color: $medium-gray;
+        }
       }
     }
 
@@ -130,6 +133,9 @@ html {
           &:hover {
             color: $light-link-hover;
           }
+        }
+        code.inline {
+          color: $dark-gray;
         }
       }
     }

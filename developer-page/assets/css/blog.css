@@ -39,6 +39,9 @@ html body.dark-mode article a {
 html body.dark-mode article a:hover {
   color: #03DAC6bb;
 }
+html body.dark-mode article code.inline {
+  color: #c8bedc;
+}
 html body.light-mode {
   background-color: #dfecf1;
   background: linear-gradient(-45deg, #dfecf1, #f6f8f9);
@@ -76,6 +79,9 @@ html body.light-mode article a {
 }
 html body.light-mode article a:hover {
   color: #3700B3;
+}
+html body.light-mode article code.inline {
+  color: #495087;
 }
 html body header {
   text-align: center;
