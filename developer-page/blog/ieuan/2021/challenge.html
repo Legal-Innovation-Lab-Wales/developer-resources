@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/30fa2950fc.js"></script>
+    <link href="../../../assets/css/prism.css" rel="stylesheet">
+    <link href="../../../assets/css/blog.css" rel="stylesheet">
+    <title>Legal Innovation Lab Wales - Developer Blog</title>
+</head>
+<body class="blog">
+<header>
+    <img alt="Legal Innovation Lab Wales, part of the Hilary Rodham Clinton School of Law" class="lab-logo"
+         src="../../../assets/images/LILW-SOL.png">
+    <nav>
+        <a href="https://legaltech.wales">
+            <i aria-hidden="true" class="fas fa-home"></i>
+        </a>
+        <a href="https://developer.legaltech.wales">
+            <i aria-hidden="true" class="fas fa-code"></i>
+        </a>
+        <a href="mailto:legalinnovation@swansea.ac.uk">
+            <i aria-hidden="true" class="fas fa-envelope"></i>
+        </a>
+        <a href="https://twitter.com/LegalLabWales">
+            <i aria-hidden="true" class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/legal-innovation-lab-wales/">
+            <i aria-hidden="true" class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Legal-Innovation-Lab-Wales">
+            <i aria-hidden="true" class="fab fa-github"></i>
+        </a>
+        <button id="theme-toggle">
+            <i class="fas fa-moon light"></i>
+            <i class="fas fa-sun dark"></i>
+        </button>
+    </nav>
+
+    <img alt="Author: Ieuan" class="author"
+         src="../../../assets/images/team/ieuan.jpg">
+    <h2 class="author">Ieuan Skinner</h2>
+    <h3 class="date">February 3, 2021</h3>
+
+</header>
+<main>
+    <article>
+        <h1>Technical Challenge Approach</h1>
+
+        <p>Shwmae! I'm Ieuan the newest software developer at the Legal Innovation Lab and in this blog post I'm going
+            to lay out the process around my hiring and the approach I took to the technical challenge. If you would
+            like to see my technical challenge implementation you can
+            <a href="https://github.com/IeuanSkinner/legal-innovation-lab-wales">find it on Github here</a>. An obvious
+            albeit important point is that Git (and GitHub) are used by the lab to version control all their projects so
+            demonstrating knowledge of this technology and platform are a must which means you should be clear and
+            professional in your commit messages, don’t have dozens of commits labelled “Fix” or “Change”, treat this
+            project as you would any enterprise software project.</p>
+
+        <h3>Documentation</h3>
+        <p>For this project the README file is intentionally thorough as many of the labs projects are open-source,
+            open-source projects are intended to be read, used and adopted by others and so all the relevant information
+            needs to be captured up front, you can’t rely on external sources of documentation or the project being
+            clear to you as you are not the intended audience. Demonstrating that you understand this and can implement
+            a clear and thorough README will be a big win.</p>
+
+        <p>The structure of the README is also very important, I begin by outlining the intent of the project along with
+            the core technologies used, following on from this are instructions on how to run the project followed by a
+            limitations section and a key features section. The latter of these is very important as it allows me to
+            highlight all the functionality I’d developed for the task which if I don’t do means small but important
+            details could go unnoticed such as the incremental loading or the OpenAPI integration.</p>
+
+        <h2>Implementation</h2>
+        <p>For my implementation I opted to extend an existing project the lab had already developed:
+            <a href="https://directoryofexpertise.legaltech.wales/">the expertise directory</a></p>
+
+        <p>My reasoning for this was that in the timeframe of the challenge I knew I could implement all the
+            functionality of this project as well as certain “enhancements” that I thought were missing. For example,
+            the existing directory does not highlight your matched keyword meaning as you type it can sometimes be
+            unclear why the results you’re getting are what they are without scanning through every word, I also noticed
+            that the JSON data for the directory was loaded as an entire block on page load which meant scalability
+            would become an issue i.e., as the directory grows so too does that initial JSON payload and so too does the
+            load time for the directory.</p>
+
+        <p>Noticing considerations like these which broadly fall into the categories of UX and Performance when you're
+            developing your implementation are worth noting down as they make for good discussion points when it comes
+            time to be debriefed on your implementation.</p>
+
+        <p>A final tip for your implementation is that a fully realized project is far and away better than a grand
+            project that remains unfinished, taking the time to demonstrate you can write clear and useful unit tests
+            for your code is a much bigger win than having loads of untested code. Being able to host your application
+            on a cloud provider such as Google Cloud or Heroku to demonstrate knowledge of this aspect of the software
+            stack is also a much bigger win than a project that can only be run locally as is being able to setup repo
+            workflows using GitHub actions to control certain events your project requires such as scraping and indexing
+            data as my implementation did.</p>
+
+        <h3>Debrief</h3>
+        <p>The final part of the hiring process is the technical debrief after your implementation has been submitted
+            and reviewed by the development team. It’s worth noting that the point of the debrief isn’t to criticize
+            and/or scrutinize a candidate personally but rather to get a feel for how they approach software, never get
+            defensive in a debrief in fact the best tip I can offer is as you’re coding your implementation ask yourself
+            “What could I do better? Where are the pitfalls?” this way you’ll be prepared to answer these same questions
+            should they be asked by the developers.</p>
+
+        <p>My own experience of the debrief was very positive, I showed the team my implementation and talked about the
+            various pros/cons even suggesting many cons myself and the rest is history from there on out.</p>
+
+        <ul>
+            <li>To conclude with the most important points:</li>
+            <li>Host your project on GitHub with clear and professional commit messages.</li>
+            <li>Have a clear and thorough README</li>
+            <li>Build what you can prioritizing fullness over function (i.e., include unit tests, host your application
+                if possible, build a workflow if useful)</li>
+            <li>Interrogate your own solution</li>
+            <li>Don’t fear the debrief and use it to its maximum potential</li>
+        </ul>
+    </article>
+
+</main>
+<footer>
+    <div class="logos">
+        <img alt="Swansea University" src="../../../assets/images/su-logo-blue-2x.png">
+        <img alt="Legal Innovation Lab Wales" src="../../../assets/images/lilw-logo-blue.png">
+        <img alt="European Regional Development Fund" class="erdf" src="../../../assets/images/erdf.png">
+    </div>
+</footer>
+<script src="../../../assets/js/themeToggle.js"></script>
+<script src="../../../assets/js/prism.js"></script>
+</body>
+</html>

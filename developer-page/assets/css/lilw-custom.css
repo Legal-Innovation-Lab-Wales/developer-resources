@@ -183,6 +183,82 @@ main #projects .card .btn.repo {
 main #projects .card .btn.repo:hover {
   background: linear-gradient(100deg, #495087, #242F60);
 }
+main #blog .card-row .col {
+  width: 300px;
+}
+@media (max-width: 768px) {
+  main #blog .card-row .col {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+main #blog .card-row .col a {
+  text-decoration: none;
+}
+main #blog .card-row .col .card img {
+  display: block;
+  margin: 0 auto;
+}
+main #blog .card-row .col .card img.author {
+  border-radius: 100%;
+  height: 2rem;
+  width: 2rem;
+}
+@media (min-width: 992px) {
+  main #blog .card-row .col .card img.author {
+    height: 2.6rem;
+    width: 2.6rem;
+  }
+}
+main #blog .card-row .col .card.blue-card {
+  background: #d6eaf8;
+  color: #1b4f72;
+}
+main #blog .card-row .col .card.blue-card:hover {
+  background: linear-gradient(35deg, #d6eaf8, #aed6f1);
+}
+main #blog .card-row .col .card.yellow-card {
+  background: #fcf3cf;
+  color: #7d6608;
+}
+main #blog .card-row .col .card.yellow-card:hover {
+  background: linear-gradient(35deg, #fcf3cf, #f9e79f);
+}
+main #blog .card-row .col .card.orange-card {
+  background: #f6ddcc;
+  color: #6e2c00;
+}
+main #blog .card-row .col .card.orange-card:hover {
+  background: linear-gradient(35deg, #f6ddcc, #edbb99);
+}
+main #blog .card-row .col .card.purple-card {
+  background: #ebdef0;
+  color: #512e5f;
+}
+main #blog .card-row .col .card.purple-card:hover {
+  background: linear-gradient(35deg, #ebdef0, #d7bde2);
+}
+main #blog .card-row .col .card.green-card {
+  background: #d0ece7;
+  color: #0b5345;
+}
+main #blog .card-row .col .card.green-card:hover {
+  background: linear-gradient(35deg, #d0ece7, #a2d9ce);
+}
+main #blog .card-row .col .card.green-2-card {
+  background: #d5f5e3;
+  color: #186a3b;
+}
+main #blog .card-row .col .card.green-2-card:hover {
+  background: linear-gradient(35deg, #d5f5e3, #abebc6);
+}
+main #blog .card-row .col .card.red-card {
+  background: #f2d7d5;
+  color: #7b241c;
+}
+main #blog .card-row .col .card.red-card:hover {
+  background: linear-gradient(35deg, #f2d7d5, #e6b0aa);
+}
 main #approach {
   color: #ffffff;
   background: linear-gradient(100deg, #0e182a, #210047);

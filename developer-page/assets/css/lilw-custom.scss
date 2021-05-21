@@ -319,6 +319,100 @@ main {
     }
   }
 
+  #blog {
+    .card-row {
+
+      .col {
+        width: 300px;
+        @media (max-width: $breakpoint-md) {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        a {
+          text-decoration: none;
+        }
+        .card {
+          img {
+            display: block;
+            margin: 0 auto;
+            &.author {
+              border-radius: 100%;
+              height: 2rem;
+              width: 2rem;
+              @media (min-width: $breakpoint-lg) {
+                height: 2.6rem;
+                width: 2.6rem;
+              }
+            }
+          }
+          &.blue-card {
+            background: $blue-card-background;
+            color: $blue-card-text;
+
+            &:hover {
+              background: $blue-card-background-2;
+            }
+          }
+
+          &.yellow-card {
+            background: $yellow-card-background;
+            color: $yellow-card-text;
+
+            &:hover {
+              background: $yellow-card-background-2;
+            }
+          }
+
+          &.orange-card {
+            background: $orange-card-background;
+            color: $orange-card-text;
+
+            &:hover {
+              background: $orange-card-background-2;
+            }
+          }
+
+          &.purple-card {
+            background: $purple-card-background;
+            color: $purple-card-text;
+
+            &:hover {
+              background: $purple-card-background-2;
+            }
+          }
+
+          &.green-card {
+            background: $green-card-background;
+            color: $green-card-text;
+
+            &:hover {
+              background: $green-card-background-2;
+            }
+          }
+
+          &.green-2-card {
+            background: $green-2-card-background;
+            color: $green-2-card-text;
+
+            &:hover {
+              background: $green-2-card-background-2;
+            }
+          }
+
+          &.red-card {
+            background: $red-card-background;
+            color: $red-card-text;
+
+            &:hover {
+              background: $red-card-background-2;
+            }
+          }
+        }
+      }
+    }
+  }
+
   #approach {
     color: $white;
     background: $approach-background;
