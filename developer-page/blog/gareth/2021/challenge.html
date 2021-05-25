@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/30fa2950fc.js"></script>
+    <link href="../../../assets/css/prism.css" rel="stylesheet">
+    <link href="../../../assets/css/blog.css" rel="stylesheet">
+    <title>Legal Innovation Lab Wales - Developer Blog</title>
+</head>
+<body class="blog">
+<header>
+    <img alt="Legal Innovation Lab Wales, part of the Hilary Rodham Clinton School of Law" class="lab-logo"
+         src="../../../assets/images/LILW-SOL.png">
+    <nav>
+        <a href="https://legaltech.wales">
+            <i aria-hidden="true" class="fas fa-home"></i>
+        </a>
+        <a href="https://developer.legaltech.wales">
+            <i aria-hidden="true" class="fas fa-code"></i>
+        </a>
+        <a href="mailto:legalinnovation@swansea.ac.uk">
+            <i aria-hidden="true" class="fas fa-envelope"></i>
+        </a>
+        <a href="https://twitter.com/LegalLabWales">
+            <i aria-hidden="true" class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/legal-innovation-lab-wales/">
+            <i aria-hidden="true" class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Legal-Innovation-Lab-Wales">
+            <i aria-hidden="true" class="fab fa-github"></i>
+        </a>
+        <button id="theme-toggle">
+            <i class="fas fa-moon light"></i>
+            <i class="fas fa-sun dark"></i>
+        </button>
+    </nav>
+
+    <img alt="Author: Phil" class="author"
+         src="../../../assets/images/team/gareth.jpg">
+    <h2 class="author">Gareth Andrews</h2>
+    <h3 class="date">May 25, 2021</h3>
+
+</header>
+<main>
+    <article>
+        <h1>Technical Challenge</h1>
+
+        <p class="subheading">
+          Hey! I’m Gareth and I’m a software developer for the Legal Innovation Lab Wales. 
+          As part of the recruitment process to get this job, I was asked to complete a technical challenge which 
+          would showcase my abilities and demonstrate my suitability for the role. For my first blog post I thought 
+          I would discuss my solution to the technical challenge. The implementation can be found on GitHub.
+        </p>
+
+        <h3>Brief</h3>
+
+        <p>The technical challenge involved re-producing the Linux kernel using only pen and paper... Ok not really. </p>
+
+        <p>
+          The real technical challenge involved producing a piece of software. There were no specifications or 
+          requirements for this software, only that it had to be completed over a weekend (Friday to Monday). 
+          The choice of programming languages and libraries used was completely up to me. This was an opportunity 
+          for me to show my working process, and evidence that I could write clean, consistent code that’s easy to 
+          understand whilst following best practices (such as 
+          <a href="https://en.wikipedia.org/wiki/Single-responsibility_principle">SRP</a>,
+          <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a> and
+          <a href="https://en.wikipedia.org/wiki/KISS_principle">KISS</a>). 
+        </p>
+
+        <p>
+          The approach I decided on was to take a simple idea and build an over engineered solution to highlight 
+          my skills to the best of my ability, in the timeframe given. I developed a basic calorie counting web 
+          application that tracks the number of calories a user consumes each day. The user can set a calorie target, 
+          then add food items and their calories to their daily diary to track their intake. I felt like this basic 
+          idea would be achievable during the challenge and I could add more features and refine the application 
+          should I have time remaining. 
+        </p>
+
+        <h3>Implementation</h3>
+
+        <p>
+          For my implementation I knew I wanted to use some of my existing skills, but also use it as an opportunity 
+          to learn something new and challenge myself. 
+        </p>
+
+        <p>
+          Before I joined the Lab, I spent a year working for Swansea University's Medical School as a Software 
+          Developer in the Data Science department. Much of my work involved building web applications to manage 
+          large datasets and facilitate data science research. Whilst in this role I gained lots of experience with 
+          HTML, CSS, JavaScript, SQL and especially C#/.NET Core. 
+        </p>
+
+        <p>
+          started with created a backend in the form of a REST API, using .NET Core, connecting to a 
+          <a href="https://www.postgresql.org/about/">PostgreSQL</a> database using 
+          <a href="https://docs.microsoft.com/en-us/ef/core/">Entity Framework</a>, secured using 
+          <a href="https://jwt.io/introduction">JWT</a>. These technologies are familiar 
+          to me, so I knew I could capture most of the functionality of the application quickly and easily, 
+          which would allow me more time to focus on the areas of the project I was less sure about. 
+        </p>
+
+        <p>
+          In the past, I have used 
+          <a href="https://docs.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-5.0&tabs=visual-studio">Razor Pages</a> 
+          to create the frontend for web applications. This is a server-side approach in the .NET Core tech stack. 
+          To challenge myself and highlight my flexibility for the role, I decided I would tackle the frontend using 
+          a technology that was completely new to me, something which we are often required to do as software developers. 
+          I wanted to use a client-side framework and after some research, I settled for 
+          <a href="https://reactjs.org/">React</a>, as it is ideal for single page applications, and I could build on 
+          my JavaScript experience. By developing the backend in a familiar technology, I allowed myself more time to 
+          get to explore React, develop my skills, and create an adventurous frontend solution. 
+        </p>
+
+        <p>
+          To further highlight my skills for the job, I packaged the entire solution using 
+          <a href="https://docs.docker.com/get-started/overview/">Docker</a> so it could be easily deployed and 
+          demonstrated on any system. 
+        </p>
+
+        <h3>Conclusion</h3>
+
+        <p>
+          Following the technical challenge, I was invited to present my solution to the rest of the development 
+          team and answer any questions they had. I really enjoyed the opportunity to showcase my skills but also 
+          having the opportunity to push myself and learn something new under pressure.  
+        </p>
+
+        <p>
+          Oh, and I got the job – hurray!
+        </p>
+
+        <p>
+          In future blog posts, I will document the processes I used to create the backend and the frontend for my 
+          technical challenge. 
+        </p>
+
+        <p>
+          Thanks for reading and stay tuned for more! 
+        </p>
+    </article>
+
+</main>
+<footer>
+    <div class="logos">
+        <img alt="Swansea University" src="../../../assets/images/su-logo-blue-2x.png">
+        <img alt="Legal Innovation Lab Wales" src="../../../assets/images/lilw-logo-blue.png">
+        <img alt="European Regional Development Fund" class="erdf" src="../../../assets/images/erdf.png">
+    </div>
+</footer>
+<script src="../../../assets/js/themeToggle.js"></script>
+<script src="../../../assets/js/prism.js"></script>
+</body>
+</html>
