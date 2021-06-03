@@ -231,6 +231,24 @@ html {
 
         h2 {
           font-size: 1.4rem;
+
+            .link-spacer {
+              margin-left: 45px;
+            }
+
+            button {
+              visibility: hidden;
+              border: none;
+            }
+
+            &:hover {
+              button {
+                visibility: visible;
+                color: $dark-gray;
+                background-color: inherit;
+              }
+            }
+
         }
 
         h3 {
