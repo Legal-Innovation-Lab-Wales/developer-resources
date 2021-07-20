@@ -161,6 +161,18 @@ html body main article h2, html body main article h3, html body main article h4 
 html body main article h2 {
   font-size: 1.4rem;
 }
+html body main article h2 .link-spacer {
+  margin-left: 45px;
+}
+html body main article h2 button {
+  visibility: hidden;
+  border: none;
+}
+html body main article h2:hover button {
+  visibility: visible;
+  color: #495087;
+  background-color: inherit;
+}
 html body main article h3 {
   font-size: 1.2rem;
 }
