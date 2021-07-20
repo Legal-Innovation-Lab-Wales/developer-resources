@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/30fa2950fc.js"></script>
+    <link href="../../../assets/css/prism.css" rel="stylesheet">
+    <link href="../../../assets/css/blog.css" rel="stylesheet">
+    <title>Legal Innovation Lab Wales - Developer Blog</title>
+</head>
+<body class="blog">
+<header>
+    <img alt="Legal Innovation Lab Wales, part of the Hilary Rodham Clinton School of Law" class="lab-logo"
+         src="../../../assets/images/LILW-SOL.png">
+    <nav>
+        <a href="https://legaltech.wales">
+            <i aria-hidden="true" class="fas fa-home"></i>
+        </a>
+        <a href="https://developer.legaltech.wales">
+            <i aria-hidden="true" class="fas fa-code"></i>
+        </a>
+        <a href="mailto:legalinnovation@swansea.ac.uk">
+            <i aria-hidden="true" class="fas fa-envelope"></i>
+        </a>
+        <a href="https://twitter.com/LegalLabWales">
+            <i aria-hidden="true" class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/legal-innovation-lab-wales/">
+            <i aria-hidden="true" class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Legal-Innovation-Lab-Wales">
+            <i aria-hidden="true" class="fab fa-github"></i>
+        </a>
+        <button id="theme-toggle">
+            <i class="fas fa-moon light"></i>
+            <i class="fas fa-sun dark"></i>
+        </button>
+    </nav>
+
+    <img alt="Author: Gareth" class="author"
+         src="../../../assets/images/team/gareth.jpg">
+    <h2 class="author">Gareth Andrews</h2>
+    <h3 class="date">Jul 20, 2021</h3>
+
+</header>
+<main>
+    <article>
+        <h1>.NET Core to Ruby on Rails</h1>
+
+        <p class="subheading">
+            I’ve recently made the switch from .NET Core to Ruby on Rails. In this blog post I want to talk about that. 
+        </p>
+
+        <h3>Introduction</h3>
+
+        <p>
+            When it comes to web application development, my framework of choice was always .NET Core. This was the 
+            framework that was used to teach me the concepts and principles of web development during my time at university. 
+            The company where I had been an intern, and then later employed full time, used .NET Core in almost every 
+            application. Even in my personal time, any web app project was completed using .NET Core. This was the framework 
+            I was most comfortable using, I was a .NET Core developer through and through.  
+        </p>
+
+        <p>
+            When I started in the Lab, I was introduced to Ruby on Rails (Rails). I had briefly touched Ruby when applying for 
+            jobs in university but had never fully explored the Rails framework. At the Lab, we have been using Rails as our 
+            primary framework for web application projects, and I’d like to discuss my experience with the two frameworks. 
+        </p>
+
+        <h3>Overview</h3>
+
+        <p>
+            .NET Core is a free, open-source web framework developed by Microsoft for Windows, macOS and Linux. It is a 
+            lightweight framework, known for its speed and power with a huge online community. Microsoft created .NET Core for 
+            enterprise projects and is optimised to help lower the number of servers, saving on infrastructure costs. .NET Core 
+            supports multiple languages, however I only used C#. Companies that use .NET Core include Stack Overflow, GE 
+            Aviation, UPS and BBC Goodfood. 
+        </p>
+
+        <p>
+            Ruby on Rails is also open-source and was created by David Heinemeier Hansson, and supports Windows, macOS and Linux. 
+            Rails is 'optimised for programmer happiness with convention over configuration’
+            <a href="https://rubyonrails.org/doctrine/">[reference]</a>, meaning developers spend less time configuring a framework 
+            and more time being productive by using ‘sensible defaults’. Rails is built using the Ruby language. Companies that use 
+            Rails include GitHub, Shopify, Airbnb and Hulu. As a result of being open source, some companies that use Rails employ 
+            teams who are actively working on the framework. 
+        </p>
+
+        <h3>Online Solutions</h3>
+
+        <p>
+            Both .NET Core and Rails are over 10 years old, with huge user bases and excellent resources. In
+            <a href="https://insights.stackoverflow.com/survey/2020#technology-web-frameworks">Stack Overflow’s 2020 Developer Survey</a>, 
+            .NET Core was rated as the 6th most popular web framework, whilst Rails was rated as the 13th most popular. The 
+            <a href="https://www.jetbrains.com/lp/devecosystem-2020/">JetBrains survey</a> reported similar results. C# developers 
+            made up 22% of respondents, whilst Ruby developers made up only 8%. Similarly, if we use Google Trends to compare the 
+            interest over time, after a huge spike in popularity Rails has been steadily declining, whilst in recent years .NET Core 
+            is growing in popularity. 
+        </p>
+        
+        <img alt="Google Trends Comparing .NET Core and Ruby on Rails"
+             src="../../../assets/images/gareth/dotnet-core-vs-rails-trends.png">
+
+        <p>
+            This increased popularity of .NET Core is noticeable when searching for resources or support online compared to Rails. 
+            There are literally thousands of up-to-date articles and videos, by Microsoft and other developers, which as a new developer 
+            I found extremely useful. Since making the switch to Rails, it’s more difficult to find these types of resources, particularly 
+            relevant, up-to-date resources. Just take a look at these images, which highlights the difference in questions asked on Stack 
+            Overflow for C# and Ruby. 
+        </p>
+
+        <img alt="Stack Overflow questions tagged 'C#' - 1,486,102"
+             src="../../../assets/images/gareth/stack-overflow-csharp.png">
+        <img alt="Stack Overflow questions tagged 'Ruby' - 219,897"
+             src="../../../assets/images/gareth/stack-overflow-ruby.png">
+
+        <p>
+            However, when I was a .NET Core developer I leaned heavily on these resources and became lazy. As developers we love to find 
+            answers to our coding problems on Google. Since working with Rails there are less articles, tutorials and solutions 
+            (particularly up to date ones) for me to reference in my code. This has led to me taking a more proactive approach to my 
+            code, and spend more time thinking about problems, referring to documentation more frequently. Coupled with the ease of Rails 
+            development, it is making me a better, happier, more confident developer.  
+        </p>
+
+        <h3>Open Source</h3>
+
+        <p>
+            Both frameworks are open source with the code bases on GitHub. At the time of writing this article, .NET Core had 267 
+            contributors and Rails had 4287. Similarly, the Rails repository has many more watchers, stars and forks. This larger GitHub 
+            community means there are far more developers ready to assist you with any problem or question. The sheer number of developers 
+            contributing to Rails has resulted in many plugins (Ruby Gems) that can be easily integrated. 
+        </p>
+
+        <p>
+            Although Rails may have a larger GitHub community, .NET Core still has more coverage online, as there are far more active .NET 
+            Core developers, as illustrated in the previous section. This could also be down to the fact although .NET Core is open source, 
+            it has a dedicated team responsible for its development. Whereas Rails is completely developed by its users, and the big 
+            companies that use it. 
+        </p>
+
+        <h3>Rails Magic</h3>
+
+        <p>
+            Developer time is expensive. Rails prides itself on its developer happiness and productivity and comes with many prebuilt 
+            components out of the box. Developers spend less time writing unnecessary code and more time designing the core functionality 
+            of a project. Rails also strips away a lot of the unnecessary code, doing a lot of magic in the background, taking a lot of 
+            the effort and heavy lifting away from the developer. 
+        </p>
+
+        <p>
+            This combined with the Convention over Configuration doctrine means developers using Rails can get web applications up and 
+            running 30% to 50% faster than using other web frameworks 
+            <a href="https://www.learnacademy.org/blog/learn-javascript-ruby-good-first-language-beginners/">[reference]</a>. Which is 
+            fantastic for developers, if they follow the very opinionated standards and conventions of the framework. 
+        </p>
+
+        <p>
+            One feature I particularly like is how Rails handles a POST request. The controller receives a hash (dictionary) containing 
+            all form variables, then you can add a completely optional method to filter those variables. In .NET Core you must explicitly 
+            assert any variable as a parameter which can become messy.
+        </p>
+
+        <p>
+            As fantastic as it is, the Rails magic can also be its downfall. Coming from .NET Core, a framework that is so granular and 
+            explicit, it took a while for me to understand that and often made debugging difficult. 
+        </p>
+
+        <h3>C# vs Ruby</h3>
+
+        <p>
+            This is probably the biggest thing I’m enjoying about the switch to Rails: Ruby is fantastic. It is syntactically simple and 
+            beautiful. It is full of useful helper methods which save so much time as a developer and leads to increased productivity.  
+        </p>
+
+        <p>
+            Ruby is a dynamically typed language, meaning you do not have to declare variable types or ensure method parameters are properly 
+            typed, which slims down the code base by 10-20% 
+            <a href="https://www.infoq.com/articles/Netter-on-Rails/#:~:text=Slim%20down%20your,errors%20is%20easy.">[reference]</a>. This 
+            makes the code base clean, concise and self-documenting.  
+        </p>
+
+        <p>
+            Most importantly it is a fun language. I also love Python, and I feel like these higher-level languages suit my brain and style 
+            of working far more. 
+        </p>
+
+        <h3>Conclusion</h3>
+
+        <p>
+            In summary, Rails is fantastic, and I am thoroughly enjoying the framework. It is very simple to use, and its clean code base 
+            means we are far more productive as developers. Finding tutorials and video guides online is sometimes more difficult than with 
+            .NET Core, but the sheer number of active developers working on the Rails GitHub repository means that support is readily available. 
+        </p>
+
+        <p>
+            That’s not to say that I don’t value .NET Core. It was excellent in teaching me the principles of MVC and web frameworks. Being a 
+            more granular framework than Rails meant that the learning curve was a lot steeper, however it made the switch to Rails effortless, 
+            and has made me value the Rails magic. 
+        </p>
+            
+        <p>
+            Rails does have its pitfalls when compared to .NET Core regarding speed and scalability. According to several tests to measure the 
+            performance of web frameworks
+            <a href="https://www.techempower.com/benchmarks/">[reference]</a>, .NET Core is fast, very fast and Rails is one of the slower 
+            frameworks. However, Rails is perfect for fast prototyping due to its focus on developer productivity. Which is exactly what we 
+            need in the Lab and why we use it. 
+        </p>
+    </article>
+
+</main>
+<footer>
+    <div class="logos">
+        <img alt="Swansea University" src="../../../assets/images/su-logo-blue-2x.png">
+        <img alt="Legal Innovation Lab Wales" src="../../../assets/images/lilw-logo-blue.png">
+        <img alt="European Regional Development Fund" class="erdf" src="../../../assets/images/erdf.png">
+    </div>
+</footer>
+<script src="../../../assets/js/themeToggle.js"></script>
+<script src="../../../assets/js/prism.js"></script>
+</body>
+</html>
